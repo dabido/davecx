@@ -1,6 +1,7 @@
 # Django settings for davecx project.
 import dj_database_url
 import os
+import djcelery
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -8,6 +9,8 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     ('David Mohl', 'dave@dave.cx'),
 )
+
+BROKER_BACKEND = 'django'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -124,6 +127,8 @@ INSTALLED_APPS = (
     'south',
     'website',
     'gunicorn',
+    'kombu.transport.django',
+    'djcelery'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -154,3 +159,5 @@ LOGGING = {
         },
     }
 }
+
+djcelery.setup_loader()

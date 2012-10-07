@@ -1,10 +1,12 @@
 # Django settings for davecx project.
 import dj_database_url
 import os
-import storages
+import djcelery
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+BROKER_BACKEND = 'django'
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -119,6 +121,9 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'south',
     'website',
+    'gunicorn',
+    'kombu.transport.django',
+    'djcelery'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -149,3 +154,5 @@ LOGGING = {
         },
     }
 }
+
+djcelery.setup_loader()

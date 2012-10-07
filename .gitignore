@@ -5,3 +5,4 @@
 .pyc
 media/
 venv/
+celerybeat-schedule.db
