@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+{% load tagparser %}
+{% block "section" %}
+<h3>Projects</h3>
+<p>Everything listed here is in my eyes a project. Out of my lazyness, I am only listing projects here that I currently remember and not old (dead?) ones. Means this is <span class="bold">not</span> a agenda of everything I ever did.</p>
+<p>Smaller things like scripts or proof of concept stuff are obviously not projects :P</p>
+<p>&nbsp;</p>
+<ul id="projects">
+	{% for project in projects %}
+	<li class="project">
+		<div class="desc">
+			<div class="row">
+				<div class="span3h">
+					<img src="/media/{{ project.screenshot }}" alt="">
+				</div>
+				<div class="span6h desc">
+					<h4>{{ project.name }}</h4>
+					<div>
+						<p class="info">Type: <span>{{ project.get_type_display }}</span></p>
+						<p class="info">Date: <span>{{ project.date }}</span></p>
+						<div class="info">
+							Description: 
+							<span>{{ project.description|parse_tags }}</span>
+						</div>
+						<p class="info">Currently active? <span>{% if project.active %}Yup!{% else %}Nope.{% endif %}</span></p>
+						<p class="info">Visit at: <span><a target="_blank" href="{{ project.url }}">{{ project.url }}</a></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<p>&nbsp;</p>
+	{% endfor %}
+</ul>
+{% endblock %}

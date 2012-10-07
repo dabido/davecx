@@ -1,0 +1,108 @@
+
+.row {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+.row .span10 {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.row .span9 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 90%;
+}
+
+.row .span8 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 80%;
+}
+
+.row .span7h {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 75%;
+}
+
+.row .span7 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 70%;
+}
+
+.row .span6h {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 65%;
+}
+
+.row .span6 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 60%;
+}
+
+.row .span5 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 50%;
+}
+
+.row .span4 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 40%;
+}
+
+.row .span3h {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 35%;
+}
+
+.row .span3 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 30%;
+}
+
+.row .span2h {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 25%;
+}h
+.row .span2 {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	width: 20%;
+}
