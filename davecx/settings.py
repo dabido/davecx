@@ -3,7 +3,7 @@ import dj_database_url
 import os
 import djcelery
 
-DEBUG = False
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
