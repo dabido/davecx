@@ -6,3 +6,6 @@
 media/
 venv/
 celerybeat-schedule.db
+Procfile_dev
+wsgi_dev.py
+settings_dev.py
