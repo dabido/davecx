@@ -278,3 +278,7 @@ span.bold {
 .main {
 	margin-bottom: 100px !important;
 }
+
+.posts {
+	min-height: 250px;
+}
