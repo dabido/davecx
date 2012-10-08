@@ -161,3 +161,7 @@ LOGGING = {
 }
 
 djcelery.setup_loader()
+
+try:
+    from settings_dev import *
+except ImportError: pass
