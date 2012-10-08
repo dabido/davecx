@@ -274,3 +274,7 @@ a.socialitem {
 span.bold {
 	font-weight: bold;
 }
+
+.main {
+	margin-bottom: 100px !important;
+}
