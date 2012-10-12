@@ -160,6 +160,12 @@ LOGGING = {
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache'
+    }
+}
+
 djcelery.setup_loader()
 
 try:

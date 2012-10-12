@@ -3,18 +3,22 @@ from django.template import RequestContext
 from xml.dom import minidom
 from website.lib import strip_html
 from website.models import Profile, Project
+from django.views.decorators.cache import cache_page
 import json
 import urllib2
 
 # Create your views here.
+@cache_page(60 * 15)
 def index(request):
 	profiles = Profile.objects.all()
 	return render_to_response("index.html", { "profiles": profiles, "current": "home" }, context_instance=RequestContext(request))
 
+@cache_page(60 * 15)
 def projects(request):
 	projects = Project.objects.all()
 	return render_to_response("projects.html", {"projects": projects, "current": "projects" }, context_instance=RequestContext(request))
 
+@cache_page(60 * 15)
 def feed_tumblr(request, site):
 	if site == "blog":
 		url = "http://blog.dave.cx/api/read/"

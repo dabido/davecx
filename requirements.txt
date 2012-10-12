@@ -1,3 +1,6 @@
+distribute==0.6.28
+django-pylibmc-sasl==0.2.4
+pylibmc==1.2.3
 Django==1.4.1
 South==0.7.6
 amqplib==1.0.2
@@ -5,7 +8,6 @@ anyjson==0.3.3
 billiard==2.7.3.17
 boto==2.6.0
 celery==3.0.11
-distribute==0.6.28
 dj-database-url==0.2.1
 django-celery==3.0.10
 django-storages==1.1.5
