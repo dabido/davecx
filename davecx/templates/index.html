@@ -2,16 +2,16 @@
 
 {% block "section" %}
 	<h3>Welcome</h3>
-	<p>Hi, I'm David! A 20 years old dude currently living in Munich, Germany. </p>
-	<p>As you  might guess from this website, I'm a software engineer. I am currently working for the company <a target="_blank" href="http://www.chip.de/cxo/">CHIP Xonio Online GmbH</a> in munich. If you're from germany, you might know their site <a target="_blank" href="http://www.chip.de/">chip.de</a>.</p>
-	<p>Although my speciality is web development, doesn't meen I can't do anything else ;)</p>
-	<p>I enjoy playing around with technologies and try new things. This is more or less the reason for this site. See it as my private playground to test things out :)</p>
+	<p>Hi, I'm David! A 20 years old guy currently living in Munich, Germany. </p>
+	<p>As you  might guess from this website, I'm a software engineer. I am currently working for the company <a target="_blank" href="http://www.chip.de/cxo/">CHIP Xonio Online GmbH</a> in munich. If you're from germany, you might know their website <a target="_blank" href="http://www.chip.de/">chip.de</a>.</p>
+	<p>My speciality is web developement.</p>
+	<p>I enjoy playing around with technologies and try new things. See this site as my private playground to test things out :)</p>
 	<p>&nbsp;</p>
-	<p>Please keep in mind that this site is in an very early state. It will hopefully become bigger over time!</p>
+	<p>Please keep in mind that everything you see here is in an very early state. It will hopefully grow from time to time!</p>
 	<h3>Contact me</h3>
 	<p>Do you have anything to tell me? Feel free to contact me anytime.</p>
 	<p>In general, I prefer email - write me at <a href="mailto:dave@dave.cx">dave@dave.cx</a>. You can find me in several social networks though.</p>
-	<p>Me on the interwebs: 
+	<p>Me on the interwebs:
 		{% for profile in profiles %}
 			<a class="socialitem" href="{{ profile.url }}" target="_blank">
 				<img alt="{{ profile.name }}" class="tooltip socialicon" src="{{ profile.icon.url }}" alt="">
