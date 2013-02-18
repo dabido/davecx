@@ -75,10 +75,10 @@ $(document).ready(function () {
 		/* Load twitter */
 		if ($(".twitterfeed").length !== 0) {
 			ul = $(".twitterfeed ul");
-			$.get("https://api.twitter.com/1/statuses/user_timeline/aqua321.json?count=10&callback=?", function (data) {
+			$.get("https://api.twitter.com/1/statuses/user_timeline/davicorn.json?count=10&callback=?", function (data) {
 				ul.html("");
 				for (i = 0; i < data.length; i += 1) {
-					ul.append("<li class='tweet'>" + parse_tweet(data[i].text) + "<p><a target='_blank' href='https://twitter.com/aqua321/status/" + data[i].id_str + "' title=''>" + prettyDate(data[i].created_at) + "</a></p></li>");
+					ul.append("<li class='tweet'>" + parse_tweet(data[i].text) + "<p><a target='_blank' href='https://twitter.com/davicorn/status/" + data[i].id_str + "' title=''>" + prettyDate(data[i].created_at) + "</a></p></li>");
 				}
 				$(".tweet p").css("display", "none");
 				$(".tweet").hover(function () {
