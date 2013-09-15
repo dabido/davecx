@@ -1,9 +1,10 @@
-from django.template.response import SimpleTemplateResponse
+from django.template.response import SimpleTemplateResponse, TemplateResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 from django.views.decorators.cache import cache_page
+from django.template import RequestContext
 from blog.models import Post, VISIBILITY_PUBLIC, VISIBILITY_UNLISTED, Tag, Category
 
 @cache_page(60 * 60)
@@ -52,23 +53,23 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 	except EmptyPage:
 		posts = paginator.page(paginator.num_pages)
 
-	return SimpleTemplateResponse('listing.html', context={
+	return TemplateResponse(request, 'listing.html', context=RequestContext(request, {
 		'posts': posts,
 		'paginator': paginator_fake,
 		'tag': tag,
 		'category': category,
 		'show_main_teaser': show_main_teaser,
 		'page': page
-	})
+	}))
 
 @cache_page(60 * 60)
 def detail(request, id, slug):
 	post = get_object_or_404(Post, Q(id=id), Q(visibility=VISIBILITY_PUBLIC) | Q(visibility=VISIBILITY_UNLISTED))
 
-	return SimpleTemplateResponse('detail.html', context={
+	return TemplateResponse(request, 'detail.html', context=RequestContext(request, {
 		'post': post
-	})
+	}))
 
 @cache_page(60 * 60)
 def about(request):
-	return SimpleTemplateResponse('about.html', context={})
+	return TemplateResponse(request, 'about.html', context=RequestContext(request, {}))

@@ -1,3 +1,4 @@
+import django.conf.global_settings as DEFAULT_SETTINGS
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import dj_database_url
@@ -115,7 +116,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'blog.middleware.dataprovider.DataProvider',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+    'blog.contextprocessors.provide_data',
 )
 
 ROOT_URLCONF = 'davecx.urls'
