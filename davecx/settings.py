@@ -25,8 +25,8 @@ AWS_HEADERS = {
     'Cache-Control': 'max-age=2419200',
 }
 
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'davecx.s3utils.MediaRootS3BotoStorage'
+STATICFILES_STORAGE = 'davecx.s3utils.StaticRootS3BotoStorage'
 
 EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME', "")
 EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD', "")
@@ -83,7 +83,7 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
-MEDIA_ROOT = '/media/'
+MEDIA_ROOT = ''
 MEDIA_URL = ''
 
 STATIC_ROOT = ''
