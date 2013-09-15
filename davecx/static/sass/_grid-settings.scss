@@ -1,0 +1,19 @@
+@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$grid-columns: 12;
+$max-width: em(1100);
+
+$column: golden-ratio(1em, 3) !default; // Column width
+$gutter: golden-ratio(1em, 3) !default; // Gutter between each two columns
+
+$fg-column: $column;
+$fg-gutter: $gutter;
+
+// Define your breakpoints
+$mobile: new-breakpoint(min-width 0px max-width 600px 4);
+$tablet: new-breakpoint(min-width 600px max-width 900px 8);
+$desktop: new-breakpoint(min-width 900px $grid-columns);
+
+// $visual-grid: true;
+$visual-grid-index: 5;

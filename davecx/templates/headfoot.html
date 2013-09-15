@@ -1,0 +1,68 @@
+{% load static %}<!DOCTYPE html>
+<html>
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+		<link rel="author" href="https://plus.google.com/117563392002936932345/"/>
+		<link rel="shortcut icon" href="{% static "img/favicon_32x32.ico" %}" />
+
+		<script type="text/javascript" src="{% static "js/angular.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/controller.js" %}"></script>
+
+
+		<meta property="og:description" content="{% block fbdescription %}David Mohl is a software engineer / traveller from Munich, Germany. Founder of Personalitycores, creator of ProxMate.{% endblock %}" />
+		<meta name="description" content="{% block description %}David Mohl is a software engineer / traveller from Munich, Germany. Founder of Personalitycores, creator of ProxMate.{% endblock %}" />
+
+		{# <meta property="og:image" content="{% static "img/icon128.png" %}" /> #}
+		<meta property="og:url" content="{{ ABSOLUTE_URL }}" />
+
+		<meta name="robots" content="{% block robots %}index, follow{% endblock %}" />
+		<meta charset="utf-8" />
+
+		<meta property="og:title" content="Dave's world - {% block fbtitle %}Post overview{% endblock %}" />
+		<title>Dave's world - {% block title %}Post overview{% endblock %}</title>
+
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-31118328-3']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+    </head>
+    <body ng-app='davecx' ng-controller='MainController' hide-menu-on-click='true'>
+		<header>
+			<nav role="navigation">
+				<a href="{% url 'blog.views.listing' %}">Home</a>
+				<a href="{% url 'blog.views.about' %}">About</a>
+				<a ng-click="show_categories = !show_categories">Categories <div class="nav-arrow"></div></a>
+			</nav>
+			<div class="categories" ng-show="show_categories">
+				{% for category in categories %}
+					<a href="{% url 'blog.views.listing' category_slug=category.slug %}">{{ category.name }}</a>
+				{% endfor %}
+			</div>
+			<h1><a href="{% url 'blog.views.listing' %}">Dave's world</a></h1>
+			<nav role="navigation" class="social">
+				<a href="http://twitter.com/davicorn/" target="_blank"><img src="{% static 'img/twitter.png' %}" alt=""></a>
+				<a href="https://facebook.com/dmohl/" target="_blank"><img src="{% static 'img/facebook.png' %}" alt=""></a>
+				<a href="https://plus.google.com/117563392002936932345" target="_blank"><img src="{% static 'img/gplus.png' %}" alt=""></a>
+			</nav>
+		</header>
+		<div class="header-flap"></div>
+
+		<div class="content">
+		{% block content %}{% endblock %}
+		</div>
+
+		<footer>
+			Everything &copy; David Mohl
+		</footer>
+    </body>
+</html>

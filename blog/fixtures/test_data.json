@@ -1,0 +1,351 @@
+[
+{
+    "pk": 1,
+    "model": "blog.category",
+    "fields": {
+        "name": "ProxMate",
+        "slug": "proxmate"
+    }
+},
+{
+    "pk": 2,
+    "model": "blog.category",
+    "fields": {
+        "name": "Ceolife",
+        "slug": "ceolife"
+    }
+},
+{
+    "pk": 3,
+    "model": "blog.category",
+    "fields": {
+        "name": "Personalitycores",
+        "slug": "personalitycores"
+    }
+},
+{
+    "pk": 1,
+    "model": "blog.tag",
+    "fields": {
+        "name": "personalitycores",
+        "slug": "personalitycores"
+    }
+},
+{
+    "pk": 2,
+    "model": "blog.tag",
+    "fields": {
+        "name": "proxmate",
+        "slug": "proxmate"
+    }
+},
+{
+    "pk": 3,
+    "model": "blog.tag",
+    "fields": {
+        "name": "development",
+        "slug": "development"
+    }
+},
+{
+    "pk": 1,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 1,
+        "title": "The concept: ProxMate DNS",
+        "content": "One of ProxMates biggest disadvantages is, that it only works inside a browser. Simply because we don\u2019t have access to the systems proxy server that easily. That would require a desktop app, which might run in some complications when trying to implement a pac_script like behaviour. \r\n\r\nAfter a bit of thinking, a more easy solution came up: Why not pushing the users traffic through a proxy server, without letting the user know that he\u2019s currently using a proxy? \r\n\r\nThe concept: Everything the user has to do, is set a custom DNS, which will take care of the rest. \r\n\r\nExample: The users device is looking up \u201cnetflix.com\u201d as a domain. Obviously the users DNS will return the netflix IP and yada yada. The custom DNS, however, will return the IP of a node of ProxMates huge proxy cluster. \r\n\r\nThe users request will hit the proxy server instead. The proxy itself, configured to act as a transparent proxy, will take the users request, request the page itself and forwards the result back to the user. Ta-da, a proxied page without setting a proxy. \r\n\r\nLet\u2019s see how this plan will end up. ",
+        "teaser": "ProxMate for chrome, my browser extension, is soon expected to break the 200.000 active users mark, making me think how to improve the service and what features to possibly add. ",
+        "tag": [
+            1,
+            2,
+            3
+        ],
+        "publish_date": "2013-09-13T16:00:09Z",
+        "teaser_image": "2013/9/concept-proxmate-dns.png",
+        "slug": "concept-proxmate-dns"
+    }
+},
+{
+    "pk": 2,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 2,
+        "title": "Hello Personalitycores!",
+        "content": "UG is the german equivalent of a ltd. Founding was easy but I can tell you: Accounting, Booking and all this paper works is not that easy.\r\n\r\nI learned that stuff in school but that was around ~5 years ago.\r\n\r\nAnyway, the first projects and contracts are slowly starting up. Let\u2019s see where this is going!\r\n",
+        "teaser": "Phew, the last weeks have been super busy (excluding my vacation). I finally fulfilled my next aim in life and founded my own company! Presenting you: Personalitycores UG.",
+        "tag": [
+            1
+        ],
+        "publish_date": "2013-09-13T16:00:56Z",
+        "teaser_image": "2013/9/hello-personalitycores.png",
+        "slug": "hello-personalitycores"
+    }
+},
+{
+    "pk": 3,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 2,
+        "title": "Going all-In",
+        "content": "Taking from my last post, some of you may know that I have founded my own company some time ago. Since things look promising right now, I decided to take the risk and go \u201call-in\u201d.  \r\n\r\nMy last job ran out past friday, but instead of searching a new one, I felt more like investing my time completely into my company. At least for some weeks. I booked a ticket to Southeast Asia (Bangkok, Thailand) where I am able to survive far longer than I could in Germany using the rest-money on my bank account.\r\n\r\nDo I regret it? Not yet. I am doing exactly what I want to do: Working on what I really love and choosing the location I feel most comfortable with right now - some sort backpacking with a Company I guess.  Of course there is risk involved. I am completely depending on my company and the daily work I do. If I\u2019m too lazy, I might end up with no money at the end of the month.\r\n\r\nRight now, everything\u2019s still very theoretic. Let\u2019s see what the future, especially the next month, brings!\r\n",
+        "teaser": "as I\u2019m trying to keep this blog a little more alive, I feel like filling it with some recent life stuff that happened.  \r\n",
+        "tag": [
+            1,
+            2
+        ],
+        "publish_date": "2013-09-11T16:00:56Z",
+        "teaser_image": "2013/9/going-all-in.png",
+        "slug": "going-all-in"
+    }
+},
+{
+    "pk": 4,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "This is a headline",
+        "content": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit ",
+        "teaser": "Hi, I am a description. I am around 200 characters long and give you a short teaser text about what's going on here. There is not really much except that. I am written interesting to get you interested in the article and probably click on me. So... click please?",
+        "tag": [
+            1,
+            2
+        ],
+        "publish_date": "2013-09-08T16:24:06Z",
+        "teaser_image": "2013/9/this-is-a-headline.png",
+        "slug": "this-is-a-headline"
+    }
+},
+{
+    "pk": 5,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [
+            3
+        ],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 6,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 1,
+        "title": "Markdown Test",
+        "content": "### This is a post writte in markdown\r\n\r\nThis text is normal. Defaults to True, meaning Django will create the appropriate database tables in migrate or as part of migrations and remove them as part of a flush management command. That is, Django _manages_ the database tables\u2019 **lifecycles**.\r\n\r\n1. One\r\n2. Two\r\n3. Three\r\n\r\nIf False, no database table creation or deletion operations will be performed for this model. This is useful if the model represents an existing table or a database view that has been created by some other means. This is the only difference when managed=False. All other aspects of model handling are exactly the same as normal. This includes\r\nFor tests involving models with managed=False, it\u2019s up to you to ensure the correct tables are created as part of the test setup.\r\n\r\nIf you\u2019re interested in changing the Python-level behavior of a model class, you could use managed=False and create a copy of an existing model. However, there\u2019s a better approach for that situation: Proxy models.",
+        "teaser": "This is a test for markdown",
+        "tag": [
+            2
+        ],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/markdown-test_1.png",
+        "slug": "markdown-test"
+    }
+},
+{
+    "pk": 7,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 1,
+        "title": "The concept: ProxMate DNS",
+        "content": "One of ProxMates biggest disadvantages is, that it only works inside a browser. Simply because we don\u2019t have access to the systems proxy server that easily. That would require a desktop app, which might run in some complications when trying to implement a pac_script like behaviour. \r\n\r\nAfter a bit of thinking, a more easy solution came up: Why not pushing the users traffic through a proxy server, without letting the user know that he\u2019s currently using a proxy? \r\n\r\nThe concept: Everything the user has to do, is set a custom DNS, which will take care of the rest. \r\n\r\nExample: The users device is looking up \u201cnetflix.com\u201d as a domain. Obviously the users DNS will return the netflix IP and yada yada. The custom DNS, however, will return the IP of a node of ProxMates huge proxy cluster. \r\n\r\nThe users request will hit the proxy server instead. The proxy itself, configured to act as a transparent proxy, will take the users request, request the page itself and forwards the result back to the user. Ta-da, a proxied page without setting a proxy. \r\n\r\nLet\u2019s see how this plan will end up. ",
+        "teaser": "ProxMate for chrome, my browser extension, is soon expected to break the 200.000 active users mark, making me think how to improve the service and what features to possibly add. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:00:09Z",
+        "teaser_image": "2013/9/concept-proxmate-dns.png",
+        "slug": "concept-proxmate-dns"
+    }
+},
+{
+    "pk": 8,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 9,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 10,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 11,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 12,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 13,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 14,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 15,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 16,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 17,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 18,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+},
+{
+    "pk": 19,
+    "model": "blog.post",
+    "fields": {
+        "visibility": 1,
+        "category": 3,
+        "title": "Mt. Fuji: To the top!",
+        "content": "Going to japan and not climbing fuji would be somewhat\u2026 wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it\u2019s easier or something. Maybe because it\u2019s not that cold on the top? I don\u2019t know.\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\nThe way is more or less splitted into different \u201cparts\u201d. At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\nDuring your way to the top you will arrive at some \u201cstations\u201d and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \u201cclimbing\u201d stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend\u2026 I don\u2019t know\u2026)\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don\u2019t really feel cold, but when standing (even if it\u2019s just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\"The one who doesn\u2019t climb fuji is a fool. The one who does it twice is a even bigger fool.\"",
+        "teaser": "What is the biggest thing in Japan? No it\u2019s not anime and no it\u2019s not manga either. It\u2019s fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from. ",
+        "tag": [],
+        "publish_date": "2013-09-13T16:40:40Z",
+        "teaser_image": "2013/9/mt-fuji-top_1.png",
+        "slug": "mt-fuji-top"
+    }
+}
+]

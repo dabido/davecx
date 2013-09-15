@@ -1,0 +1,27 @@
+a.sharebutton {
+	width: 161px;
+	display: inline-block;
+	border-radius: 4px;
+	color: white;
+	text-decoration: none;
+	line-height: 28px;
+	text-align: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+a.share-facebook {
+	@include background-image(url(../img/facebook-icon.png), linear-gradient(#3A5897, #2F487B));
+}
+
+a.share-gplus {
+	@include background-image(url(../img/gplus-icon.png), linear-gradient(#d94837, #a42719));
+}
+
+a.share-twitter {
+	@include background-image(url(../img/twitter-icon.png), linear-gradient(#3cc6f4, #31b2dd));
+}
+
+a.sharebutton:hover {
+	text-decoration: none !important;
+}

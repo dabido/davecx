@@ -1,0 +1,62 @@
+{% extends "headfoot.html" %}
+{% load markdown %}
+
+{% block title %}{% block fbtitle %}{{ post.title }}{% endblock %}{% endblock %}
+{% block description %}{% block fbdescription %}{{ post.teaser }}{% endblock %}{% endblock %}
+
+{% block robots %}{% spaceless %}
+	{% ifequal post.visibility VISIBILITY.VISIBILITY_UNLISTED %}
+		noindex, nofollow
+	{% else %}
+    	{{ block.super }}
+	{% endifequal %}
+{% endspaceless %}{% endblock robots %}
+
+{% block content %}
+<article class="post">
+<img src="{{ post.teaser_image.url }}" alt="{{ post.title }} teaser image">
+
+<div class="infobox" following-infobox>
+	<h3>Article info</h3>
+	<p>Author:<span>David Mohl</span></p>
+	<p>Published on:<span>{{ post.publish_date|date:'Y/m/d' }}</span></p>
+	<p>Category:<span><a href="{% url 'blog.views.listing' category_slug=post.category.slug %}">{{ post.category.name }}</a></span></p>
+	<p>{% spaceless %}
+		Tags:
+		<span>{% for tag in post.tag.all %}
+			<a href="{% url 'blog.views.listing' tag_slug=tag.slug %}" title="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+		{% endfor %}</span>
+	{% endspaceless %}</p>
+	<div class="share">
+		<a class="sharebutton share-facebook" sharebutton="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ ABSOLUTE_URL|urlencode }}">Share</a>
+		<a class="sharebutton share-gplus" sharebutton="Google Plus" href="https://plus.google.com/share?url={{ ABSOLUTE_URL|urlencode }}">Plus</a>
+		<a class="sharebutton share-twitter" sharebutton="Twitter" href="https://twitter.com/intent/tweet?url={{ ABSOLUTE_URL|urlencode }}&via=Davicorn&text={{ post.title|urlencode }}">Tweet</a>
+	</div>
+</div>
+
+<div class="flow">
+	<header>
+		<h2>{{ post.title }}</h2>
+	</header>
+	<p class="teasertext">{{ post.teaser|urlize }}</p>
+	{{ post.content|markdown|urlize }}
+</div>
+
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'davecx'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+</article>
+{% endblock content %}

@@ -1,0 +1,140 @@
+$header-height: 50px;
+
+body > header:first-child, div.header-flap {
+	@include span-columns(13);
+	@include omega();
+	background: $lightblue;
+	margin: 0px 0px 10px 0px;
+	box-shadow: $simple-shadow;
+	position: relative;
+	@include shift(-0.5);
+	z-index: 3;
+	font-size: 13px;
+
+	h1 {
+		text-align: center;
+		font-weight: bold;
+		margin: 0;
+		line-height: $header-height;
+		@include span-columns(3);
+		color: white;
+	}
+
+	a {
+		color: white;
+		line-height: $header-height;
+		display: inline-block;
+		height: $header-height;
+		text-decoration: none;
+		padding: 0px 10px;
+	}
+
+	a:hover {
+		background: $darkblue;
+	}
+
+	nav {
+		text-align: left;
+		@include span-columns(4);
+		@include shift(0.5);
+
+		a {
+			font-size: 17px;
+
+			img {
+				height: $header-height;
+				line-height: $header-height;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	nav.social {
+		@include span-columns(4);
+		@include shift(0);
+		text-align: right;
+	}
+
+	.nav-arrow {
+		width: 0;
+		height: 0;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+
+		border-top: 6px solid white;
+		display: inline-block;
+		position: relative;
+		bottom: 3px;
+	}
+
+	.categories {
+		position: absolute;
+		@include span-columns(2);
+		@include shift(1.8);
+		top: $header-height;
+		background: white;
+		z-index: 1;
+		padding: 5px 0px;
+		border-radius: 5px;
+
+		a {
+			display: block;
+			line-height: 30px;
+			height: auto;
+			color: $black;
+		}
+	}
+
+	@include media($mobile) {
+		h1 {
+			font-size: 15px;
+			display: none;
+		}
+
+		nav {
+			@include span-columns(2);
+			a:last-child {
+				display: none;
+			}
+		}
+	}
+
+	@include media($tablet) {
+		h1 {
+			font-size: 15px;
+		}
+	}
+}
+
+div.header-flap {
+	position: absolute;
+	height: $header-height;
+	z-index: -1;
+}
+
+div.header-flap::after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: $header-height;
+	border-width: 15px 30px;
+	border-style: solid;
+	border-color: $darkerblue $darkerblue transparent transparent;
+}
+
+div.header-flap::before
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 0px;
+	top: $header-height;
+	border-width: 15px 30px;
+	border-style: solid;
+	border-color: $darkerblue transparent transparent $darkerblue;
+}
