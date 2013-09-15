@@ -1,8 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 from django.core.urlresolvers import reverse
-from django.db.models import Q
 from blog.models import *
-
 
 class StaticSitemap(Sitemap):
     priority = 0.7
