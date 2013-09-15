@@ -60,20 +60,7 @@ article.mainteaser {
 	}
 
 	@include media($mobile) {
-		@include fill-parent;
-
-		a {
-			color: $black;
-		}
-
-		div.info {
-			padding: 0px 10px 10px 10px;
-			position: relative;
-			left: 0;
-			bottom: 0;
-			color: $black;
-			text-shadow: none;
-		}
+		@include span-columns(4);
 	}
 }
 

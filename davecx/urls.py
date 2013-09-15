@@ -2,6 +2,7 @@ import settings
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic.base import RedirectView
+from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -24,6 +25,7 @@ urlpatterns = patterns('blog.views',
 urlpatterns += patterns('',
 	url(r'^admin/', include(admin.site.urls)),
     url("^favicon\.ico", RedirectView.as_view(url='%simg/favicon_32x32.ico' % settings.STATIC_URL)),
+    url("^404.html", TemplateView.as_view(template_name='404.html')),
 )
 
 

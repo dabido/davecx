@@ -181,16 +181,12 @@ article.mainteaser {
     text-shadow: 2px 2px 10px #000; }
   @media screen and (min-width: 0px) and (max-width: 600px) {
     article.mainteaser {
+      display: block;
+      float: left;
+      margin-right: 7.42297%;
       width: 100%; }
-      article.mainteaser a {
-        color: #414141; }
-      article.mainteaser div.info {
-        padding: 0px 10px 10px 10px;
-        position: relative;
-        left: 0;
-        bottom: 0;
-        color: #414141;
-        text-shadow: none; } }
+      article.mainteaser:last-child {
+        margin-right: 0; } }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
   article.smallteaser {
@@ -313,6 +309,11 @@ article.about {
       display: none; }
     article.about section {
       width: 100%; } }
+
+section.error {
+  background: white;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  padding: 10px; }
 
 body {
   padding: 10px 0px 0px 0px;

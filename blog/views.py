@@ -2,6 +2,7 @@ from django.template.response import SimpleTemplateResponse, TemplateResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import Http404
+from django.shortcuts import get_object_or_404
 from blog.models import Post, VISIBILITY_PUBLIC, VISIBILITY_UNLISTED, Tag, Category
 
 def listing(request, page=1, tag_slug=None, category_slug=None):
@@ -23,11 +24,11 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 		post_list = post_list.filter(visibility=VISIBILITY_PUBLIC)
 
 	if tag_slug is not None:
-		tag = Tag.objects.get(slug=tag_slug)
+		tag = get_object_or_404(Tag, slug=tag_slug)
 		post_list = post_list.filter(tag__id__contains=tag.id)
 
 	if category_slug is not None:
-		category = Category.objects.get(slug=category_slug)
+		category = get_object_or_404(Category, slug=category_slug)
 		post_list = post_list.filter(category=category)
 
 	paginator = Paginator(post_list, posts_per_page)
@@ -47,10 +48,7 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 	})
 
 def detail(request, id, slug):
-	try:
-		post = Post.objects.get(Q(id=id), Q(visibility=VISIBILITY_PUBLIC) | Q(visibility=VISIBILITY_UNLISTED))
-	except Post.DoesNotExist:
-		raise Http404
+	post = get_object_or_404(Post, Q(id=id), Q(visibility=VISIBILITY_PUBLIC) | Q(visibility=VISIBILITY_UNLISTED))
 
 	return TemplateResponse(request, 'detail.html', {
 		'post': post
