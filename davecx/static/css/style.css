@@ -416,7 +416,14 @@ article.post {
     article.post div.flow:last-child {
       margin-right: 0; }
     article.post div.flow img {
-      width: auto; }
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; }
+      article.post div.flow img:last-child {
+        margin-right: 0; }
     article.post div.flow .youtube-container {
       position: relative;
       padding-bottom: 56.25%;

@@ -108,7 +108,9 @@ article.post {
 		@include span-columns(8);
 		@include omega();
 		img {
-			width: auto;
+			@include span-columns(12);
+			height: auto;
+			margin-bottom: 10px;
 		}
 
 		padding: 10px;

@@ -33,7 +33,7 @@ class Migration(SchemaMigration):
             ('content', self.gf('django.db.models.fields.TextField')(max_length=10000)),
             ('slug', self.gf('django.db.models.fields.SlugField')(max_length=50)),
             ('category', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['blog.Category'])),
-            ('publish_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2013, 9, 14, 0, 0))),
+            ('publish_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2013, 9, 15, 0, 0))),
             ('visibility', self.gf('django.db.models.fields.SmallIntegerField')(default=1)),
         ))
         db.send_create_signal(u'blog', ['Post'])
@@ -74,7 +74,7 @@ class Migration(SchemaMigration):
             'category': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['blog.Category']"}),
             'content': ('django.db.models.fields.TextField', [], {'max_length': '10000'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'publish_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2013, 9, 14, 0, 0)'}),
+            'publish_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2013, 9, 15, 0, 0)'}),
             'slug': ('django.db.models.fields.SlugField', [], {'max_length': '50'}),
             'tag': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['blog.Tag']", 'symmetrical': 'False'}),
             'teaser': ('django.db.models.fields.TextField', [], {'max_length': '500'}),

@@ -60,12 +60,11 @@ app.directive('followingInfobox', function ($window) {
 		var windowEl = angular.element($window);
 		var elementOffset = getOffset(element[0]);
 		var elementHeight = element[0].clientHeight;
-
-		var wrapper = angular.element(element).parent()[0].querySelector('.flow');
-		var wrapperHeight = wrapper.clientHeight;
-		var wrapperOffset = getOffset(wrapper);
-
 		windowEl.on('scroll', function() {
+			var wrapper = angular.element(element).parent()[0].querySelector('.flow');
+			var wrapperHeight = wrapper.clientHeight;
+			var wrapperOffset = getOffset(wrapper);
+
 			var windowScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 			if (windowScrollPosition > elementOffset.top && windowScrollPosition < (wrapperOffset.top + wrapperHeight - elementHeight)) {
 				var difference = windowScrollPosition - elementOffset.top;

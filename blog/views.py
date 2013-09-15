@@ -31,7 +31,18 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 		category = get_object_or_404(Category, slug=category_slug)
 		post_list = post_list.filter(category=category)
 
+	if page == 2:
+		post_list = post_list[1:]
+
+	if len(post_list) == 0:
+		raise Http404
+
+	# We are using 2 paginators to correct the page number on the index page
+	# One is running with 6 posts, one is running with 7.
 	paginator = Paginator(post_list, posts_per_page)
+	paginator_fake = Paginator(post_list, 6) # Faked paginator for correct page
+	paginator_fake = paginator_fake.page(1)
+
 	try:
 		posts = paginator.page(page)
 	except PageNotAnInteger, e:
@@ -41,6 +52,7 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 
 	return TemplateResponse(request, 'listing.html', {
 		'posts': posts,
+		'paginator': paginator_fake,
 		'tag': tag,
 		'category': category,
 		'show_main_teaser': show_main_teaser,

@@ -1,0 +1,370 @@
+[
+{
+    "pk": 1, 
+    "model": "blog.category", 
+    "fields": {
+        "name": "Japan", 
+        "slug": "japan"
+    }
+},
+{
+    "pk": 2, 
+    "model": "blog.category", 
+    "fields": {
+        "name": "Korea", 
+        "slug": "korea"
+    }
+},
+{
+    "pk": 3, 
+    "model": "blog.category", 
+    "fields": {
+        "name": "Personalitycores", 
+        "slug": "personalitycores"
+    }
+},
+{
+    "pk": 4, 
+    "model": "blog.category", 
+    "fields": {
+        "name": "ProxMate", 
+        "slug": "proxmate"
+    }
+},
+{
+    "pk": 1, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "japan", 
+        "slug": "japan"
+    }
+},
+{
+    "pk": 2, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "travel", 
+        "slug": "travel"
+    }
+},
+{
+    "pk": 3, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "korea", 
+        "slug": "korea"
+    }
+},
+{
+    "pk": 4, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "ceolife", 
+        "slug": "ceolife"
+    }
+},
+{
+    "pk": 5, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "personalitycores", 
+        "slug": "personalitycores"
+    }
+},
+{
+    "pk": 6, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "thailand", 
+        "slug": "thailand"
+    }
+},
+{
+    "pk": 7, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "visa", 
+        "slug": "visa"
+    }
+},
+{
+    "pk": 8, 
+    "model": "blog.tag", 
+    "fields": {
+        "name": "proxmate", 
+        "slug": "proxmate"
+    }
+},
+{
+    "pk": 1, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Mt. Fuji: To the top!", 
+        "visibility": 1, 
+        "content": "Going to japan and not climbing fuji would be somewhat... wrong, so of course I had to do it. Fuji is 3776m high, the climbing season usually starts in july and ends in early september. I think you can also climb it off season but during the season it's easier or something. Maybe because it's not that cold on the top? I don't know.\r\n\r\nThere are different ways to climb fuji. From the tokyo site you usually go either from the bottom (takes 12h to the top) or the middle (6h). 6h climbing is enough for me. We picked the way from the middle. To be specific, Fujisan 5th station (\u5bcc\u58eb\u5c71\u4e94\u5408\u76ee).\r\n\r\nYou can go there by bus only during the season, we reserved our tickets on highwaybus (https://highwaybus.com/rs-web01-prd-rel/gp/index). The whole trip was around 5.000\u5186. \r\n\r\nMostly people climb fuji to see the sunset or the sunrise on the summit. We picked the sunrise for us and started going there at 7 pm from Shinjuku. At 10:30 we arrived at 5th station and started climbing through the night. \r\n\r\n![Sign at Fuji trail start](http://i.imgur.com/kCGDF.jpg?1)\r\n\r\nThe way is more or less splitted into different \"parts\". At first you are just following a way. More like hiking. After a while the way turns into serpentines. Zig-zag. This lasts for some hours and is still kinda easy to go.\r\n\r\nDuring your way to the top you will arrive at some \"stations\" and smaller houses. There are toilets for 200\u5186 and some snacks sold by people living there. Usually hikers use these places for breaks. \r\n\r\nAfter a few hours of serpentines the way turns very very rocky. This is were hiking is over. You are actually \"climbing\" stones straight up to the top. As the way gets more and more narrow you will find yourself in a point where you actually stand in a queue behind some other people before you can step on the next rock! (Maybe only because we went there on weekend... I don't know...)\r\n\r\nThis is where it gets annoying. Your speed depends completely on the people infront of you! If just 1 person takes a break to take a picture or something, everyone behind him (including you, even if your 10 people after) has to wait until he finished. A hint: Use stations to go infront of people groups as they will very likely be in your way!\r\n\r\nThis escalates when you nearly reach the top and the sun is slowly coming out. As everyone there wants to take a picture of the sunrise, no one will continue walking. We usually had to wait 10 seconds or more to take the next step to the top.\r\n\r\nThe bigger problem is that during the whole trip, you sweat a lot! When moving you don't really feel cold, but when standing (even if it's just for 10 seconds) you can really feel the 5\u00b0C at the summit. \r\n\r\nAfter 7h straight climbing we did it! We stood on the top of mount fuji and enjoyed the morning sun. \r\n\r\n![Morning sun on top of Fuji mountain](http://i.imgur.com/vfPeX.jpg?1)\r\n\r\nThe way down was around 3-4 hours but because of the slippy way much harder than ascending (at least for me). But now you can finally enjoy the beautiful view and the warm sunlight, even on cold fuji! \r\n\r\n![Way down #1](http://i.imgur.com/vIzjv.jpg?1)\r\n\r\n![Way down #2](http://i.imgur.com/mdZRU.jpg?1)\r\n\r\nThank you fuji for this awesome day! \u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\r\n\r\n\"The one who doesn't climb fuji is a fool. The one who does it twice is a even bigger fool.\"", 
+        "teaser": "What is the biggest thing in Japan? No it's not anime and no it's not manga either. It's fujisan (\u5bcc\u58eb\u5c71), a mountain you might have already heard from.", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-08-29T14:18:08Z", 
+        "teaser_image": "2013/9/mt-fuji-to-the-top.png", 
+        "slug": "mt-fuji-to-the-top"
+    }
+},
+{
+    "pk": 2, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Introducing: My Mamachari", 
+        "visibility": 1, 
+        "content": "I finally came over myself and bought one. For transportation, a bit comfort and to see how it is to be a cycler in Tokyo. Introducing, my brand new Mamachari:\r\n\r\nI bought it in Asakusa. Sadly I couldn't take it by train (maybe I should have bought a foldable one?) so I had to cycle all the way from Asakusa to Takadanobaba back. Took me around 4 hours but wow! That was fun!\r\n\r\nIt was around 10.000 yen (is that much for a mamachari? I don't know) at a nice friendly store near the Asakusa central hotel. I can't really remember the name though.\r\n\r\nNow looking for cycling partners! :)", 
+        "teaser": "Bicycles are very famous in Tokyo. Nearly everyone has one. The most famous (and maybe cheapest) bike out there is the Mamachari. It has a only 1 gear and a little basket on the front. ", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-07-15T14:18:08Z", 
+        "teaser_image": "2013/9/introducing-my-mamachari.png", 
+        "slug": "introducing-my-mamachari"
+    }
+},
+{
+    "pk": 3, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Tokyo Tower!", 
+        "visibility": 1, 
+        "content": "Costs around 800 yen to go up. It's splitted into \"Main Observatory\" and the \"Special Observatory\" which costs around 600 yen extra. \r\n\r\nThe Main Observatory is located at 150m height, the Special Observatory at 250m. Sadly we were too late for the special one so only Main Observatory this time. \r\n\r\nThere was a little concert at the top, though I don't know the artists name. Had to be someone famous as a lot of people were clapping to his songs :p.\r\n\r\nAnyway! The view was great but the windows a little too dirty to take good pictures. What a pity!", 
+        "teaser": "Part of every sightseeing trip - the Tokyo Tower (\u6771\u4eac\u30bf\u30ef\u30fc).", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-06-28T14:18:08Z", 
+        "teaser_image": "2013/9/tokyo-tower.png", 
+        "slug": "tokyo-tower"
+    }
+},
+{
+    "pk": 4, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 2, 
+        "title": "Viva la Korea", 
+        "visibility": 1, 
+        "content": "Spontanous actions are fun! But maybe too spontanous?", 
+        "teaser": "Yesterday I got invited to Korea by a friend from the Internet called \"Yubin\" (Interpals profile: http://www.interpals.net/Yuki2809). For 1 week. And did i do it? Of course I did. At around 10 pm, i booked the flight for today and here I am now. In Korea! Seoul to be specific. \r\n\r\nYubin picked me up from the airport and guided me through Shinchon.\r\n\r\nThe weather is faaar better than the one in Japan at the moment (pretty rainy...). The sun is shining, everything is warm, the air is humid. What a nice first day!\r\n\r\nI even tried Korean BBQ!", 
+        "tag": [
+            3
+        ], 
+        "publish_date": "2012-06-13T14:18:08Z", 
+        "teaser_image": "2013/9/viva-la-korea.png", 
+        "slug": "viva-la-korea"
+    }
+},
+{
+    "pk": 5, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Arriving in japan", 
+        "visibility": 1, 
+        "content": "Next stop was the Sakura House office in Shinjuku. I checked in, got the instructions how to get to my room, the keys and everything was fine. Right after a 30 minutes train ride i arrived already in my room in quiet and calm Zoshigaya. \r\n\r\nFinally that time has come. Free from work and ready for vacation! After a rough 14 hours flight (with changing in Copenhagen) I finally arrived in Tokyo, breathing the humid air again. \r\n\r\nIt's been 1 year, wow...", 
+        "teaser": "Finally that time has come. Free from work and ready for vacation! After a rough 14 hours flight (with changing in Copenhagen) I finally arrived in Tokyo, breathing the humid air again. ", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-06-07T14:18:08Z", 
+        "teaser_image": "2013/9/arriving-in-japan.png", 
+        "slug": "arriving-in-japan"
+    }
+},
+{
+    "pk": 6, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Exploring Zoshigaya", 
+        "visibility": 1, 
+        "content": "Zoshigaya is a pretty nice place to live. It's not noisy or crowdy, rather calm and relaxing. \r\n\r\nI found a supermarket right around the corner and a kombini next door. The stations nearby are Zoshigaya Metro Station and JR Takadanobaba station (it's a little walk to that though.) \r\n\r\nThere are even some little temples around here! \r\n\r\n![Temple in Zoshigaya](http://i.imgur.com/lSK5R.jpg?1)\r\n\r\n(OT: I love temples.)\r\n\r\nI think Zoshigaya is awesome to live! It's nice and relaxing but very near at the center (Shinjuku) at the same time!", 
+        "teaser": "I started exploring Zoshigaya...", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-06-08T14:18:08Z", 
+        "teaser_image": "2013/9/exploring-zoshigaya.png", 
+        "slug": "exploring-zoshigaya"
+    }
+},
+{
+    "pk": 7, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 2, 
+        "title": "Running through Seoul", 
+        "visibility": 1, 
+        "content": "... aaaand we went to the center of Seoul! :D\r\n\r\n![King Sejong](http://i.imgur.com/g69yC.jpg?1) \r\n\r\nMy friend Yubin was a pretty good guide! We went to so many places and she was able to tell me the story about everything. Just like she prepared for it (though she didn't). \r\n\r\nWe even wrote some Hangul :p (That's hers! Mine looked way worse xD)\r\n\r\n![Yubin's Hangeul](http://i.imgur.com/UcbmP.jpg?1)\r\n\r\nSeoul is a great city. Reminds me a little on tokyo! You can see so many things as a tourist and buy soo much stuff (K-Pop for example ;)). There are shops everywhere on the street! Also it seems that Koreans are somewhat attracted to Dunkin Doughnuts and Baskin Robbins. I've never seen so many of these!\r\n\r\nYet it feels... familiar. I constantly had to think about europe. It just... feels like europe!", 
+        "teaser": "Second day in Korea. The weather is still great (maybe a little hot though\u2026), and the journey continues...", 
+        "tag": [
+            2, 
+            3
+        ], 
+        "publish_date": "2012-06-14T14:18:08Z", 
+        "teaser_image": "2013/9/running-through-seoul.png", 
+        "slug": "running-through-seoul"
+    }
+},
+{
+    "pk": 8, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 2, 
+        "title": "Goodbye Korea, Hello Airport Chaos!", 
+        "visibility": 1, 
+        "content": "I had a nice last day in \"Lotte World\", an amusement park in Seoul and watched the Water Show at the Hangang River after.\r\n\r\nAt around 2 p.m. the next day, we started going back to Incheon airport, preparing to say good bye. But was it that easy? Of course not. \r\n\r\nAt the same time there was a Taifun in Japan. My flight got delayed by 30 minutes. After these 30 minutes still no new infos. We went to a Korea air information thing and asked about the current situation and here it comes - the flight got cancelled. Like all flights from Seoul to Tokyo on that day. \r\n\r\nBut it gets worse, the replacement flight is on the next day, at around 7 am! Means checkin is at 6. That wouldn't be a serious problem. That Seoul trains and buses start driving at 5 is one. \r\n\r\nConclusion: Wait at the airport. The whole night. __14 hours__. Luckily my friend was willing to stay with me the WHOLE night. That was indeed an unique experience!", 
+        "teaser": "That week passed by fast and now it's already time to say goodbye. ", 
+        "tag": [
+            1, 
+            2, 
+            3
+        ], 
+        "publish_date": "2012-06-20T14:18:08Z", 
+        "teaser_image": "2013/9/goodbye-korea-hello-airport-chaos.png", 
+        "slug": "goodbye-korea-hello-airport-chaos"
+    }
+},
+{
+    "pk": 9, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "To the Pokemon Center!", 
+        "visibility": 1, 
+        "content": "It's located near the Hamamatsucho station. Take a look at the map here - [http://www.pokemon.co.jp/gp/pokecen/english/images/map_tokyo_e.pdf](http://www.pokemon.co.jp/gp/pokecen/english/images/map_tokyo_e.pdf)\r\n\r\nAlready when arriving at the station, you will see little signs, guiding you to the pokemon center there. \r\n\r\n![Pokemon center sign](http://i.imgur.com/ZS8PU.jpg?1)\r\n\r\nAfter around 5 minutes walk from the station we arrived at the center. Lot's of people from all ages were sitting infront of it and playing Pokemon - You can't really miss it! (I think you will get some ingame presents if you go there with your game)\r\n\r\n![Infront of the pokemon center](http://i.imgur.com/Dhpw3.jpg?1)\r\n\r\nThe center itself is a big store for all kind of Pokemon goods.\r\n\r\nYou can get Plushies, Hangers, Towels, Cards, Games, Fans, Pens, ... - easy said: Everything. The prices are so-so. A small plushie costs around 700yen. A bigger one around 1000. I think that's OK!\r\n\r\nIf you want to buy a Pokemon plushie in Germany you will most likely pay around 30\u20ac. \r\n\r\n![Pokemon plushies!](http://i.imgur.com/PeZO5.jpg?1)\r\n\r\nAre you a Pokemon fan? Well, you should definitely go there! (It's very crowdy though!) I didn't really buy anything but for the photos the trip was definitely worth it!", 
+        "teaser": "Soo there is this place in Tokyo, called the Pokemon Center... And of course we had to go there!", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-07-07T14:18:08Z", 
+        "teaser_image": "2013/9/pokemon-center.png", 
+        "slug": "pokemon-center"
+    }
+},
+{
+    "pk": 10, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Over to Kamakura", 
+        "visibility": 1, 
+        "content": "Kamakura is a city, around 50km away from Tokyo. Right at the ocean. We went there by riding the Shonan-Shinjuku line from Shibuya to Zushi, leaving the train at Kamakura station. Costs around 900 yen.\r\n\r\nThere is also the \"Daibutsu\", \u5927\u4ecf or \"Great Buddha\" inside K\u014dtoku-in. A big bronze buddha statue.\r\n\r\nYou can even go inside it! Though we missed that. We didn't know the exact opening shedule so we arrived right after it closed :(\r\n\r\nAfter going to the beach a little, we went back to Tokyo and the day was already over. Time's passing by so fast when having fun!", 
+        "teaser": "Today we went outside of Tokyo: To Kamakura!", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-06-25T14:18:08Z", 
+        "teaser_image": "2013/9/over-kamakura.png", 
+        "slug": "over-kamakura"
+    }
+},
+{
+    "pk": 11, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Trying Japanese food: (Okonomiyaki)", 
+        "visibility": 1, 
+        "content": "Okonomiyaki is often called a \"Japanese pancake\". For me it wasn't a pancake at all. More a... strange mix... of everything you want. Put it together, mix it with egg and cabbage and there you go - okonomiyaki!\r\n\r\nThe restaurant kinda reminded me of Korean BBQ. Inmiddle of each desk is a hot plate. You order your food, the waitress brings the stuff and mixes it infront of your eyes together. Then puts it on the hot plate, adds a cover and tells you to turn it after 4 minutes. Looks something like that:\r\n\r\n![Okonomiyaki in progress #1](http://i.imgur.com/PrRpL.jpg?1)\r\n\r\nAfter turning and cooking for another 4 minutes we were ready to eat it. We tried two different ones. The first one is mixed cabbage with egg, surrounded by some rice crackers. \r\n\r\n![Okonomiyaki in progress #2](http://i.imgur.com/KtrbW.jpg?1)\r\n\r\nThe second one was choosen by me. It was egg mixed with cabbage mixed with some pork mixed with noodles mixed with another egg on top. In the end when the waitress finished adding them together it looked something like that:\r\n\r\n![Okonomiyaki in progress #3](http://i.imgur.com/q1t0W.jpg?1)\r\n\r\nCooking it for another 8 minutes and we were ready to eat. It tasted... well, I can't really describe the taste. But it was good!\r\n\r\nThe restaurant was the \u3071\u3059\u305f\u304b\u3093 inside Shinjukus MyLord. Try it!", 
+        "teaser": "Today we didn't really have an idea what to eat. So why not trying something japanese? We choosed to go to an Okonomiyaki restaurant. ", 
+        "tag": [
+            1, 
+            2
+        ], 
+        "publish_date": "2012-07-02T14:18:08Z", 
+        "teaser_image": "2013/9/trying-japanese-food-okonomiyaki.png", 
+        "slug": "trying-japanese-food-okonomiyaki"
+    }
+},
+{
+    "pk": 12, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 3, 
+        "title": "Hello Personalitycores!", 
+        "visibility": 1, 
+        "content": "Phew, the last weeks have been super busy (excluding my vacation), but I finally did it, I founded my own company!\r\n\r\nUG is the german equivalent of a ltd. Founding was easy but I can tell you: Accounting, Booking and all this paper works is not that easy.\r\n\r\nI learned that stuff in school but that was around ~5 years ago.\r\n\r\n\r\n\r\nAnyway, the first projects and contracts are slowly starting up. Let's see where this is going!", 
+        "teaser": "I finally fulfilled my next aim in life and founded my own company! Presenting you: Personalitycores UG.", 
+        "tag": [
+            4, 
+            5
+        ], 
+        "publish_date": "2013-04-29T14:18:08Z", 
+        "teaser_image": "2013/9/hello-personalitycores.png", 
+        "slug": "hello-personalitycores"
+    }
+},
+{
+    "pk": 13, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 3, 
+        "title": "Going all-in!", 
+        "visibility": 1, 
+        "content": "My last job ran out past friday, but instead of searching a new one, I felt more like investing my time completely into my company. At least for some weeks. I booked a ticket to Southeast Asia (Bangkok, Thailand) where I am able to survive far longer than I could in Germany using the rest-money on my bank account.\r\n\r\nDo I regret it? Not yet. I am doing exactly what I want to do: Working on what I really love and choosing the location I feel most comfortable with right now - some sort backpacking with a Company I guess.  Of course there is risk involved. I am completely depending on my company and the daily work I do. If I'm too lazy, I might end up with no money at the end of the month.\r\n\r\n\r\nRight now, everything's still very theoretic. Let's see what the future, especially the next month, brings!\r\n\r\n*the image is MBK in Bangkok btw*", 
+        "teaser": "Taking from my last post, some of you may know that I have founded my own company some time ago. Since things look promising right now, I decided to take the risk and go \"all-in\".  \r\n", 
+        "tag": [
+            4, 
+            5, 
+            6
+        ], 
+        "publish_date": "2013-05-15T14:18:08Z", 
+        "teaser_image": "2013/9/going-all-in.png", 
+        "slug": "going-all-in"
+    }
+},
+{
+    "pk": 14, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 1, 
+        "title": "Fighting for a japanese visa", 
+        "visibility": 3, 
+        "content": "Followers of my blog might now that I really like japan. During the last 2 years, I visited Tokyo 2 times; for 1 and for 4 month. \r\n\r\nDuring my 4 month trip, I started getting attached to Tokyo and looked around at the job market over there. After having a few interviews, I did the decision and said to myself, \"I want to live here.\". I took myself some time to think everything through, spoke with my family and decided what to do. Shortly after I found a company I really like, the visa application process began. This was in October 2012, and where my timeline begins:\r\n\r\n- **November 2012**: I've been asked to submit additional documents and informations about my education. (I did a vocational education as software engineer in Germany). \r\n\r\n- **December 2012**: The visa process has entered it's final phase and should be over in a bit.\r\n\r\n- **January 2013**: My visa application got rejected. The reason: Undereducated. I don't have a university, nor 10 years of working experience or a IT certificate that is accepted in Japan. I have however a 3 years IT vocational education which should be worth something, right? \r\n\r\n- **February 2013**: I decided to appeal at the immigration office. I gathered some information about the german education system, information about the content of my VET, information and proofs about projects I've been involved in and stuff I did in my past. \r\n\r\nDuring that time, I resigned from my job in Germany (3 month resignation period). \r\n\r\nThe appeal reached the immigration office and the answer was very clear: Even though they agree that I have the necessary/sufficient skills for the job, I am not eligible. It is **impossible** for me to reapply or appeal again. \r\n\r\n- **March 2013**: Giving up? Not yet! Besides Software Engineering, I also have experience and skills in User Experience Design (UXD), Visual Experience Design (VXD) and general Web Design. \r\n\r\nRequirements for this visa were 3 years of working experience, which I have. I acquired written statements from my previous companies confirming my experience, alongside some other required documents. \r\n\r\n- **April 2013**: I finished gathering all needed informations and the next application process began. \r\n\r\n- **Mai 2013**: The application is taking longer than expected, a answer is expected in the first part of June. \r\n\r\nAt this time, my working contract in Germany ended. I started my own business and left Germany to a country near Japan. \r\n\r\n- **June 2013**: The application process is taking a little longer, as there were issues with my application. It can take up to 3 more months for a conclusion. \r\n\r\nLuckily it didn't take that long. End of June, I got my next answer: The application got rejected once again. The reasons were the same as before: No 10 years of working experience, no university degree, no certification. The visa I applied on apparently wasn't enough for a design job in the internet business. \r\n\r\nGiving up?? Nah!\r\n\r\n- **July 2013**: I decided to visit Japan once again for a month. This time on a tourist visa to attend some festivals and fireworks happening during july / august. \r\n\r\nOn the airport, I got dragged out at the immigration counter since something flagged me up in their system. I had to follow to a interview room I already knew from the year before, but that's a different story. I got asked a lot of questions, where I am coming from and why I don't have a onward ticket. \r\n\r\nAfter explaining everything, a immigration officer came back with my passport and the tourist visa stamp inside. He told me in a very sharp voice that I am not allowed to work in Japan on this visa. I assume they think I will work illegally? \r\n\r\nAnyway, after getting my baggage and going to the \"nothing to declare\" counter, they opened my bag (nothing unusual) and another airport guy joined us. I got asked more questions: Why did I come to Japan? Do I like Japan? What am I going to do during this month? \r\n\r\nEveryone was really friendly and helpful. After explaining everything once again, I was allowed to pass the gates into Japan! I even mentioned my working visa attempts and made the guy smile. (Pretty sure he knew that already anyway)\r\n\r\n- **August 2013**: I am re-thinking my current options left. After visiting my ex-japanese school, just for saying hi, they told me that there is a language course I could attend. Including getting a student visa. \r\n\r\nThe problem is, I can't take any course I want because I don't have 12 years of highschool, which is a requirement here in Japan. Only special courses that are \"approved by the ministry of justice\" are working. Otherwise my visa would very likely get rejected.\r\n\r\n- **September**: I handed in my application details for the language course. Visa application will take, as always, around 1 month. This is my **3rd attempt** of getting a japanese visa. \r\n\r\n- **October 2013**: ??? ", 
+        "teaser": "I decided to do the next step: Moving to japan! If it would be that easy...", 
+        "tag": [
+            1, 
+            2, 
+            7
+        ], 
+        "publish_date": "2013-09-15T14:18:08Z", 
+        "teaser_image": "2013/9/fighting-japanese-visa.png", 
+        "slug": "fighting-japanese-visa"
+    }
+},
+{
+    "pk": 15, 
+    "model": "blog.post", 
+    "fields": {
+        "category": 4, 
+        "title": "Making ProxMate a central thing", 
+        "visibility": 1, 
+        "content": "It's been a while since my addon ProxMate is out in the wild wild world. Over the months I grabbed a bunch of (positive and negative) experiences when it comes to releasing. \r\n\r\nMy major problem was the slow reviewing process on mozillas side when pushing a update. Sometimes this happens within 1 day, sometimes after 2 weeks. \r\n\r\nBut do you really need to push an update when changing a service? When just changing a proxy rule? No you don't.\r\n\r\n### The concept\r\n\r\nSince version 2.1, ProxMate became a central thing. Or in other words a client-server application. The addon core has been reduced to only include a logic for enabling / disabling modules and parsing a config script (ignore the banner by now).\r\n\r\n![Admin interface #1](http://i.imgur.com/h79R5.png)\r\n\r\nWhen launching the addon, ProxMate calls a mothership (a.k.a. my server), pulls a config file, parses it and saves the settings in local storage. This process should happen every 30 minutes. If the server is unavailable (caused by whatever reason), the addon will simply use the last saved config. \r\n\r\nThis makes reacting and pushing \"shadow updates\" (a.k.a. not code updates) really fast. Adding a service happens in an instant and within 30 minutes every user using v2.1+ will run the new code.\r\n\r\n### Applying the same thing to proxy nodes\r\n\r\nIf you have to maintain multiple proxy servers, you don't have the time to configure a whitelist, userlist, configs or whatever on every single of them. Using the concept above, I automated the process. \r\n\r\nA cron is installed, pulling a whitelist, userlist, config and whatsoever all x minutes. Entries are configured over a simple admin interface\r\n\r\n![Admin interface #2](http://i.imgur.com/r0yjW.png)\r\n\r\n### Single point of failure?\r\n\r\nWell, yes. But even if the webserver dies, caches will still hold a usable config. And if that dies, a static config is being used. And even if that fails, ProxMate will simply use the last available config and continue working. Completely without a mothership server.\r\n\r\nUsing a bunch of fallbacks and caches, a total fallout is very unlikely.", 
+        "teaser": "Trying a new approach on the ProxMate architecture", 
+        "tag": [
+            8, 
+            5
+        ], 
+        "publish_date": "2012-11-26T15:18:08Z", 
+        "teaser_image": "2013/9/making-proxmate-central-thing.png", 
+        "slug": "making-proxmate-central-thing"
+    }
+}
+]
