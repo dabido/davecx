@@ -117,6 +117,10 @@ article.smallteaser {
 			overflow: hidden;
 		}
 
+		h2 {
+			line-height: 25px;
+		}
+
 		p::after {
 			@include span-columns(12);
 			content: ' ';

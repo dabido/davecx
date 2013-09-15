@@ -24,7 +24,6 @@ var getOffset = function(elem) {
 app.directive('hideMenuOnClick', function ($window) {
 	return function($scope, element, attrs) {
 		angular.element($window).on('click', function (ev) {
-			console.info(ev.target.attributes);
 			if (ev.target !== undefined && ev.target.attributes !== undefined) {
 				var attributes = ev.target.attributes;
 				for (index in attributes) {

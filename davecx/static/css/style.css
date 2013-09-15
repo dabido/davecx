@@ -236,6 +236,8 @@ article.smallteaser div.info {
   article.smallteaser div.info p {
     max-height: 130px;
     overflow: hidden; }
+  article.smallteaser div.info h2 {
+    line-height: 25px; }
   article.smallteaser div.info p::after {
     display: block;
     float: left;
