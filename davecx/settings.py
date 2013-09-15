@@ -3,7 +3,7 @@ from dateutil.relativedelta import relativedelta
 import dj_database_url
 import os
 
-DEBUG = False
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -50,7 +50,7 @@ PROJECT_DIR = os.path.dirname(__file__)
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, "static"), # For global static files
-    os.path.abspath(os.path.join(PROJECT_DIR, '..', 'blog/static')) # Blog static files
+    # os.path.abspath(os.path.join(PROJECT_DIR, '..', 'blog/static')) # Blog static files
 )
 
 TEMPLATE_DIRS = (
