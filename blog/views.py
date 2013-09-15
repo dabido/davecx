@@ -3,8 +3,10 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import Http404
 from django.shortcuts import get_object_or_404
+from django.views.decorators.cache import cache_page
 from blog.models import Post, VISIBILITY_PUBLIC, VISIBILITY_UNLISTED, Tag, Category
 
+@cache_page(60 * 60)
 def listing(request, page=1, tag_slug=None, category_slug=None):
 	visibility_mode = request.GET.get('preview', False)
 	page = int(page)
@@ -59,6 +61,7 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 		'page': page
 	})
 
+@cache_page(60 * 60)
 def detail(request, id, slug):
 	post = get_object_or_404(Post, Q(id=id), Q(visibility=VISIBILITY_PUBLIC) | Q(visibility=VISIBILITY_UNLISTED))
 
@@ -66,5 +69,6 @@ def detail(request, id, slug):
 		'post': post
 	})
 
+@cache_page(60 * 60)
 def about(request):
 	return TemplateResponse(request, 'about.html', {})

@@ -35,8 +35,8 @@ class Tag(models.Model):
 
 def get_upload_path(instance, filename):
     return os.path.join(
-        "%d" % datetime.date.today().year,
-        "%d" %  datetime.date.today().month,
+        "%d" % instance.publish_date.year,
+        "%d" %  instance.publish_date.month,
         "%s.png" % instance.slug
     )
 
