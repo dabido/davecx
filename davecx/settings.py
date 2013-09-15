@@ -1,3 +1,5 @@
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 import dj_database_url
 import os
 
@@ -5,12 +7,37 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('David Mohl', 'dave@dave.cx'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = "davecx"
+AWS_QUERYSTRING_AUTH = False
+
+date_after_month = datetime.today() + relativedelta(months=1)
+AWS_HEADERS = {
+    'Expires': date_after_month.strftime('%a, %d %b %Y %T GMT'),
+    'Cache-Control': 'max-age=2419200',
+}
+
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME', "")
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD', "")
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+os.environ['MEMCACHE_SERVERS'] = os.environ.get('MEMCACHIER_SERVERS', '').replace(',', ';')
+os.environ['MEMCACHE_USERNAME'] = os.environ.get('MEMCACHIER_USERNAME', '')
+os.environ['MEMCACHE_PASSWORD'] = os.environ.get('MEMCACHIER_PASSWORD', '')
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -37,7 +64,7 @@ TEMPLATE_DIRS = (
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'Europe/Berlin'
+TIME_ZONE = 'Asia/Tokyo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -56,24 +83,11 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/var/www/example.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
+MEDIA_ROOT = ''
+MEDIA_URL = ''
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
-# Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = '/media/'
-
-# Absolute path to the directory static files should be collected to.
-# Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/var/www/example.com/static/"
 STATIC_ROOT = ''
-
-# URL prefix for static files.
-# Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -156,6 +170,14 @@ LOGGING = {
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
+        'LOCATION': os.environ.get('MEMCACHIER_SERVERS', '').replace(',', ';'),
+        'TIMEOUT': 500,
+        'BINARY': True,
+    }
+}
 
 try:
     from settings_dev import *

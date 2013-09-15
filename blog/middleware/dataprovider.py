@@ -4,7 +4,6 @@ import urllib
 
 class DataProvider(object):
 	def process_template_response(self, request, response):
-		print "hello"
 		existing_context = response.context_data
 		existing_context['ABSOLUTE_URL'] = '%s' % (request.build_absolute_uri(request.get_full_path()))
 		existing_context['ABSOLUTE_URL_ENCODED'] = urllib.quote(existing_context['ABSOLUTE_URL'].encode("utf-8"))
