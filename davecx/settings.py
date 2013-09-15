@@ -84,10 +84,10 @@ USE_L10N = True
 USE_TZ = True
 
 MEDIA_ROOT = ''
-MEDIA_URL = ''
+MEDIA_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 
 STATIC_ROOT = ''
-STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/static/'
 
 # List of finder classes that know how to find static files in
 # various locations.
