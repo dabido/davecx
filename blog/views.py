@@ -1,4 +1,4 @@
-from django.template.response import SimpleTemplateResponse, TemplateResponse
+from django.template.response import SimpleTemplateResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import Http404
@@ -52,7 +52,7 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 	except EmptyPage:
 		posts = paginator.page(paginator.num_pages)
 
-	return TemplateResponse(request, 'listing.html', {
+	return SimpleTemplateResponse('listing.html', context={
 		'posts': posts,
 		'paginator': paginator_fake,
 		'tag': tag,
@@ -65,10 +65,10 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 def detail(request, id, slug):
 	post = get_object_or_404(Post, Q(id=id), Q(visibility=VISIBILITY_PUBLIC) | Q(visibility=VISIBILITY_UNLISTED))
 
-	return TemplateResponse(request, 'detail.html', {
+	return SimpleTemplateResponse('detail.html', context={
 		'post': post
 	})
 
 @cache_page(60 * 60)
 def about(request):
-	return TemplateResponse(request, 'about.html', {})
+	return SimpleTemplateResponse('about.html', context={})
