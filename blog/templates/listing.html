@@ -3,15 +3,15 @@
 {% block content %}
 <section class="posts">
 	{% if show_main_teaser %}
-	<article class="teaser mainteaser">
+	<article class="teaser mainteaser" itemscope itemtype="http://schema.org/BlogPosting">
 		<a href="{% url 'blog.views.detail' id=posts.0.id slug=posts.0.slug %}">
 			<div class="darkener"></div>
-			<img src="{{ posts.0.teaser_image.url }}" alt="{{ posts.0.title }} teaser image">
+			<img itemprop="image" src="{{ posts.0.teaser_image.url }}" alt="{{ posts.0.title }} teaser image">
 		</a>
 		<div class="info">
-			<h2><a href="{% url 'blog.views.detail' id=posts.0.id slug=posts.0.slug %}">{{ posts.0.title }}</a></h2>
-			<p class="date">Published on <span>{{ posts.0.publish_date|date:'Y/m/d' }}</span></p>
-			<p>{{ posts.0.teaser }}</p>
+			<h2><a itemprop="name" href="{% url 'blog.views.detail' id=posts.0.id slug=posts.0.slug %}">{{ posts.0.title }}</a></h2>
+			<p class="date">Published on <span itemprop="datePublished">{{ posts.0.publish_date|date:'Y/m/d' }}</span></p>
+			<p itemprop="description">{{ posts.0.teaser }}</p>
 		</div>
 	</article>
 	{% else %}
@@ -27,15 +27,15 @@
 	{% endif %}
 	{% for post in posts %}
 	{% if not forloop.first or not show_main_teaser %}
-	<article class="teaser smallteaser">
+	<article class="teaser smallteaser" itemscope itemtype="http://schema.org/BlogPosting">
 		<a class="imgwrapper" href="{% url 'blog.views.detail' id=post.id slug=post.slug %}">
 			<div class="darkener"></div>
-			<img src="{{ post.teaser_image.url }}" alt="{{ post.title }} teaser image">
+			<img itemprop="image" src="{{ post.teaser_image.url }}" alt="{{ post.title }} teaser image">
 		</a>
 		<div class="info">
-			<h2><a href="{% url 'blog.views.detail' id=post.id slug=post.slug %}">{{ post.title }}</a></h2>
-			<p class="date">Published on <span>{{ post.publish_date|date:'Y/m/d' }}</span></p>
-			<p>{{ post.teaser }}</p>
+			<h2><a itemprop="name" href="{% url 'blog.views.detail' id=post.id slug=post.slug %}">{{ post.title }}</a></h2>
+			<p class="date">Published on <span itemprop="datePublished">{{ post.publish_date|date:'Y/m/d' }}</span></p>
+			<p itemprop="description">{{ post.teaser }}</p>
 		</div>
 	</article>
 	{% endif %}

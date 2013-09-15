@@ -13,17 +13,17 @@
 {% endspaceless %}{% endblock robots %}
 
 {% block content %}
-<article class="post">
-<img src="{{ post.teaser_image.url }}" alt="{{ post.title }} teaser image">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<img itemprop="image" src="{{ post.teaser_image.url }}" alt="{{ post.title }} teaser image">
 
 <div class="infobox" following-infobox>
 	<h3>Article info</h3>
-	<p>Author:<span>David Mohl</span></p>
-	<p>Published on:<span>{{ post.publish_date|date:'Y/m/d' }}</span></p>
+	<p>Author:<span itemprop="author">David Mohl</span></p>
+	<p>Published on:<span itemprop="datePublished">{{ post.publish_date|date:'Y/m/d' }}</span></p>
 	<p>Category:<span><a href="{% url 'blog.views.listing' category_slug=post.category.slug %}">{{ post.category.name }}</a></span></p>
 	<p>{% spaceless %}
 		Tags:
-		<span>{% for tag in post.tag.all %}
+		<span itemprop="keywords">{% for tag in post.tag.all %}
 			<a href="{% url 'blog.views.listing' tag_slug=tag.slug %}" title="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
 		{% endfor %}</span>
 	{% endspaceless %}</p>
@@ -36,13 +36,13 @@
 
 <div class="flow">
 	<header>
-		<h2>{{ post.title }}</h2>
+		<h2 itemprop="name">{{ post.title }}</h2>
 	</header>
-	<p class="teasertext">{{ post.teaser|urlize }}</p>
-	{{ post.content|markdown|urlize }}
+	<p class="teasertext" itemprop="description">{{ post.teaser|urlize }}</p>
+	<span itemprop="articleBody">{{ post.content|markdown|urlize }}</span>
 </div>
 
-<div class="comments">
+<div class="comments" itemprop="comment">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
