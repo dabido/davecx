@@ -10,3 +10,4 @@ pylibmc==1.2.3
 six==1.4.1
 wsgiref==0.1.2
 markdown2==2.1.0
+python-dateutil==2.1
