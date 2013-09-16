@@ -1,6 +1,8 @@
 {% extends "headfoot.html" %}
 {% load static %}
 
+{% block title %}{% block fbtitle %}Meet David!{% endblock %}{% endblock %}
+
 {% block content %}
 <article class="about" itemscope itemtype="http://schema.org/Person">
 	<img itemprop="image" src="{% static "img/dave.jpg" %}" alt="">
