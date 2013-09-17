@@ -57,9 +57,9 @@ app.directive('sharebutton', function ($window) {
 app.directive('followingInfobox', function ($window) {
 	return function(scope, element, attrs) {
 		var windowEl = angular.element($window);
+		var elementOffset = getOffset(element[0]);
+		var elementHeight = element[0].clientHeight;
 		windowEl.on('scroll', function() {
-			var elementOffset = getOffset(element[0]);
-			var elementHeight = element[0].clientHeight;
 			var wrapper = angular.element(element).parent()[0].querySelector('.flow');
 			var wrapperHeight = wrapper.clientHeight;
 			var wrapperOffset = getOffset(wrapper);
