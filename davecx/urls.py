@@ -29,6 +29,7 @@ urlpatterns += patterns('',
     url("^404.html", TemplateView.as_view(template_name='404.html')),
     url("^500.html", TemplateView.as_view(template_name='500.html')),
     url('^sitemap\.xml', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+    url('^robots\.txt', TemplateView.as_view(template_name='robots.txt')),
 )
 
 
