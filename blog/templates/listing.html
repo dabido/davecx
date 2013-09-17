@@ -9,7 +9,7 @@
 			<img itemprop="image" src="{{ posts.0.teaser_image.url }}" alt="{{ posts.0.title }} teaser image">
 		</a>
 		<div class="info">
-			<h2><a itemprop="name" href="{% url 'blog.views.detail' id=posts.0.id slug=posts.0.slug %}">{{ posts.0.title }}</a></h2>
+			<h2 itemprop="name"><a itemprop="url" href="{% url 'blog.views.detail' id=posts.0.id slug=posts.0.slug %}">{{ posts.0.title }}</a></h2>
 			<p class="date">Published on <span itemprop="datePublished">{{ posts.0.publish_date|date:'Y/m/d' }}</span></p>
 			<p itemprop="description">{{ posts.0.teaser }}</p>
 		</div>
@@ -33,7 +33,7 @@
 			<img itemprop="image" src="{{ post.teaser_image.url }}" alt="{{ post.title }} teaser image">
 		</a>
 		<div class="info">
-			<h2><a itemprop="name" href="{% url 'blog.views.detail' id=post.id slug=post.slug %}">{{ post.title }}</a></h2>
+			<h2 itemprop="name"><a itemprop="url" href="{% url 'blog.views.detail' id=post.id slug=post.slug %}">{{ post.title }}</a></h2>
 			<p class="date">Published on <span itemprop="datePublished">{{ post.publish_date|date:'Y/m/d' }}</span></p>
 			<p itemprop="description">{{ post.teaser }}</p>
 		</div>
