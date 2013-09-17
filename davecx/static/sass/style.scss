@@ -70,7 +70,8 @@ article.post {
 	img {
 		@include fill-parent;
 		max-height: 500px;
-		background: black;
+		border: solid 1px #eee;
+		padding: 5px;
 	}
 
 	div.infobox {
@@ -113,9 +114,15 @@ article.post {
 		@include span-columns(8);
 		@include omega();
 		img {
+			margin-bottom: 10px;
 			@include span-columns(12);
 			height: auto;
-			margin-bottom: 10px;
+		}
+
+		img.smaller {
+			height: auto;
+			width: auto;
+			clear: both;
 		}
 
 		padding: 10px;

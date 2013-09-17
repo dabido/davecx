@@ -566,7 +566,8 @@ article.post {
   article.post img {
     width: 100%;
     max-height: 500px;
-    background: black; }
+    border: solid 1px #eee;
+    padding: 5px; }
   article.post div.infobox {
     display: block;
     float: left;
@@ -610,14 +611,18 @@ article.post {
     article.post div.flow:last-child {
       margin-right: 0; }
     article.post div.flow img {
+      margin-bottom: 10px;
       display: block;
       float: left;
       margin-right: 2.35765%;
       width: 100%;
-      height: auto;
-      margin-bottom: 10px; }
+      height: auto; }
       article.post div.flow img:last-child {
         margin-right: 0; }
+    article.post div.flow img.smaller {
+      height: auto;
+      width: auto;
+      clear: both; }
     article.post div.flow .youtube-container {
       position: relative;
       padding-bottom: 56.25%;
