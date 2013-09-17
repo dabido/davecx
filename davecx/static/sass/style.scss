@@ -117,6 +117,8 @@ article.post {
 			margin-bottom: 10px;
 			@include span-columns(12);
 			height: auto;
+			border: solid 1px #eee;
+			padding: 5px;
 		}
 
 		img.smaller {
