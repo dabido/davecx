@@ -10,13 +10,29 @@ article.about {
 		@include span-columns(8);
 	}
 
-	@include media($mobile) {
+	@include media($tablet) {
 		img {
-			display: none;
+			@include row();
+			@include span-columns(4);
+			@include omega();
 		}
 
 		section {
-			@include fill-parent();
+			@include span-columns(8);
+		}
+	}
+
+	@include media($mobile) {
+		img {
+			@include row();
+			@include span-columns(3);
+			@include omega();
+		}
+
+		section {
+			@include row();
+			@include span-columns(4);
+			@include omega();
 		}
 	}
 }

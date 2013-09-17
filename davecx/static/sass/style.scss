@@ -68,7 +68,7 @@ article.post {
 
 	img {
 		@include fill-parent;
-		height: 500px;
+		max-height: 500px;
 		background: black;
 	}
 
@@ -144,13 +144,25 @@ article.post {
 	}
 
 	@include media($tablet) {
+		div.flow {
+			@include span-columns(8);
+			@include shift(0);
+		}
 
+		div.infobox {
+			@include span-columns(4);
+		}
 	}
 }
 
 .pagina {
 	@include span-columns(12);
 	text-align: right;
+
+	@include media($mobile) {
+		@include span-columns(4);
+		text-align: center;
+	}
 }
 
 footer {

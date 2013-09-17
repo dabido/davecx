@@ -13,7 +13,8 @@ $fg-gutter: $gutter;
 // Define your breakpoints
 $mobile: new-breakpoint(min-width 0px max-width 600px 4);
 $tablet: new-breakpoint(min-width 600px max-width 900px 8);
-$desktop: new-breakpoint(min-width 900px $grid-columns);
+$desktop: new-breakpoint(min-width 900px max-width $max-width $grid-columns);
+$wide-desktop: new-breakpoint(min-width $max-width $grid-columns);
 
 // $visual-grid: true;
 $visual-grid-index: 5;

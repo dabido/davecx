@@ -87,22 +87,66 @@ body > header:first-child, div.header-flap {
 	}
 
 	@include media($mobile) {
+		@include span-columns(4);
+		@include shift(0);
+
 		h1 {
 			font-size: 15px;
-			display: none;
+			@include span-columns(2);
 		}
 
 		nav {
-			@include span-columns(2);
-			a:last-child {
+			@include span-columns(1);
+			@include shift(0);
+			a {
 				display: none;
 			}
+
+			a:first-child {
+				display: inline-block;
+			}
+		}
+
+		nav.social {
+			@include span-columns(1);
 		}
 	}
 
 	@include media($tablet) {
+		@include span-columns(8);
+		@include shift(0);
+
+		nav {
+			@include shift(0);
+			@include span-columns(3);
+
+			a:nth-child(2) {
+				display: none;
+			}
+		}
+
 		h1 {
 			font-size: 15px;
+			@include span-columns(2);
+		}
+
+		.categories {
+			@include shift(.7);
+			min-width: 140px;
+		}
+	}
+
+	@include media($desktop) {
+		@include span-columns(12);
+		@include shift(0);
+
+		h1 {
+			@include span-columns(4);
+		}
+
+		nav {
+			@include shift(0);
+			@include span-columns(4);
 		}
 	}
 }

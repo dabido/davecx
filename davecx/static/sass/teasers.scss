@@ -27,20 +27,26 @@ article.mainteaser {
 
 	a {
 		color: white;
+	}
+
+	a.imgwrapper {
 		display: block;
 		position: relative;
+		line-height: 500px;
+		background: black;
 
 		.darkener {
 			position: absolute;
 			background: black;
+			height: 100%;;
 			@include fill-parent;
-			height: 500px;
 			opacity: .3;
 			@include transition(opacity .7s);
 		}
 
 		img {
-			height: 500px;
+			max-height: 500px;
+			vertical-align: middle;
 		}
 	}
 
@@ -65,25 +71,57 @@ article.mainteaser {
 
 	@include media($mobile) {
 		@include span-columns(4);
+		@include omega();
+
+		a {
+			color: $black;
+		}
+
+		a.imgwrapper {
+			background: black;
+			line-height: 200px;
+
+			.darkener {
+				position: absolute;
+				@include fill-parent;
+				background: black;
+				opacity: .2;
+				@include transition(opacity .5s);
+			}
+		}
+
+		a.imgwrapper:hover {
+			.darkener {
+				opacity: 0;
+			}
+		}
+
+		div.info {
+			bottom: 0;
+			left: 0;
+			position: relative;
+			text-shadow: none;
+			color: $black;
+		}
+	}
+
+	@include media($tablet) {
+		a.imgwrapper {
+			background: black;
+			line-height: 400px;
+
+			.darkener {
+				position: absolute;
+				@include fill-parent;
+				background: black;
+				opacity: .2;
+				@include transition(opacity .5s);
+			}
+		}
 	}
 }
 
 article.smallteaser {
-
-	@include media($mobile) {
-		@include fill-parent;
-	}
-
-	@include media($tablet) {
-		@include span-columns(4);
-		@include omega("2n+1");
-	}
-
-	@include media($desktop) {
-		@include span-columns(4);
-		@include omega("3n+4");
-		height: 450px;
-	}
 
 	a.imgwrapper {
 		background: black;
@@ -97,7 +135,7 @@ article.smallteaser {
 		}
 
 		.darkener {
-			height: 200px;
+			height: 100%;;
 			position: absolute;
 			@include fill-parent;
 			background: black;
@@ -111,8 +149,6 @@ article.smallteaser {
 			opacity: 0;
 		}
 	}
-
-
 
 	div.info {
 		padding: 0px 20px 10px 20px;
@@ -134,5 +170,33 @@ article.smallteaser {
 			bottom: 0;
 			@include linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
 		}
+	}
+
+	@include media($mobile) {
+		@include span-columns(4);
+		@include omega();
+
+		a.imgwrapper {
+			img {
+				max-height: 400px;
+			}
+		}
+	}
+
+	@include media($tablet) {
+		@include span-columns(4);
+		@include omega("2n+1");
+	}
+
+	@include media($desktop) {
+		@include span-columns(4);
+		@include omega("3n+4");
+		height: 450px;
+	}
+
+	@include media($wide-desktop) {
+		@include span-columns(4);
+		@include omega("3n+4");
+		height: 450px;
 	}
 }

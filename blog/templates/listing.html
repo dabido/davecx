@@ -4,7 +4,7 @@
 <section class="posts">
 	{% if show_main_teaser %}
 	<article class="teaser mainteaser" itemscope itemtype="http://schema.org/BlogPosting">
-		<a href="{% url 'blog.views.detail' id=posts.0.id slug=posts.0.slug %}">
+		<a class="imgwrapper" href="{% url 'blog.views.detail' id=posts.0.id slug=posts.0.slug %}">
 			<div class="darkener"></div>
 			<img itemprop="image" src="{{ posts.0.teaser_image.url }}" alt="{{ posts.0.title }} teaser image">
 		</a>
