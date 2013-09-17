@@ -44,7 +44,8 @@ os.environ['MEMCACHE_PASSWORD'] = os.environ.get('MEMCACHIER_PASSWORD', '')
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
     'dave.cx',
-    'www.dave.cx'
+    'www.dave.cx',
+    'davecx.herokuapp.com'
 ]
 
 PROJECT_DIR = os.path.dirname(__file__)
