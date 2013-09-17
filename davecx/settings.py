@@ -7,6 +7,8 @@ import os
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 TEMPLATE_DEBUG = DEBUG
 
+ASSET_VERSION = os.environ.get('ASSET_VERSION', 'v1')
+
 ADMINS = (
     ('David Mohl', 'dave@dave.cx'),
 )
@@ -19,6 +21,9 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = "davecx"
 AWS_QUERYSTRING_AUTH = False
+
+HEROKU_API_KEY = '63401c309823224b4e97ac509ab229f756cd6392'
+HEROKU_APP = 'davecx'
 
 date_after_month = datetime.today() + relativedelta(months=1)
 AWS_HEADERS = {
@@ -49,6 +54,7 @@ ALLOWED_HOSTS = [
 ]
 
 PROJECT_DIR = os.path.dirname(__file__)
+MANAGE_DIR = os.path.abspath(os.path.join(PROJECT_DIR, '..'))
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, "static"), # For global static files
@@ -141,7 +147,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'south',
-    'blog'
+    'blog',
+    'heroku-helper'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

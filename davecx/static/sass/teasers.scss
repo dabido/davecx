@@ -35,8 +35,8 @@ article.mainteaser {
 			background: black;
 			@include fill-parent;
 			height: 500px;
-			opacity: .2;
-			@include transition(opacity .5s);
+			opacity: .3;
+			@include transition(opacity .7s);
 		}
 
 		img {
@@ -51,12 +51,16 @@ article.mainteaser {
 	}
 
 	div.info {
+		padding: 10px;
 		position: absolute;
-		bottom: 20px;
+		bottom: 30px;
 		left: 30px;
-		max-width: 400px;
+		max-width: 450px;
 		color: white;
-		text-shadow: 2px 2px 10px #000;
+		text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 7px #001135;
+		// background: rgba(0, 0, 0, 0.3);
+		border-radius: 0.5em;
+		@include transition(color .5s);
 	}
 
 	@include media($mobile) {
