@@ -110,6 +110,10 @@ body > header:first-child, div.header-flap {
 		nav.social {
 			@include span-columns(1);
 		}
+
+		.categories {
+			display: none;
+		}
 	}
 
 	@include media($tablet) {

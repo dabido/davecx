@@ -127,7 +127,9 @@ body > header:first-child, div.header-flap {
         margin-right: 7.42297%;
         width: 19.43277%; }
         body > header:first-child nav.social:last-child, div.header-flap nav.social:last-child {
-          margin-right: 0; } }
+          margin-right: 0; }
+      body > header:first-child .categories, div.header-flap .categories {
+        display: none; } }
   @media screen and (min-width: 600px) and (max-width: 900px) {
     body > header:first-child, div.header-flap {
       display: block;
@@ -549,7 +551,8 @@ section.posts {
   section.posts header {
     background: white;
     box-shadow: 1px 1px 2px 0 #d0d0d0;
-    padding: 0px 10px; }
+    padding: 0px 10px;
+    margin-top: -20px; }
 
 article.post {
   background: white;
