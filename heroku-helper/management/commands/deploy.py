@@ -34,7 +34,7 @@ class Command(BaseCommand):
 			action='store_true',
 			dest='flush_cache',
 			default=False,
-			help='Collect staticfiles after deploy'
+			help='Flushes the cache after deploying'
 		),
 
 		make_option('--use_all',
