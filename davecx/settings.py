@@ -7,7 +7,7 @@ import os
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 TEMPLATE_DEBUG = DEBUG
 
-ASSET_VERSION = os.environ.get('ASSET_VERSION', 'v1')
+APP_REVISION = os.environ.get('APP_REVISION', 'v1')
 
 ADMINS = (
     ('David Mohl', 'dave@dave.cx'),

@@ -11,7 +11,7 @@ def provide_data(request):
 		'VISIBILITY_PUBLIC': VISIBILITY_PUBLIC,
 		'VISIBILITY_PRIVATE': VISIBILITY_PRIVATE
 	}
-	context['ASSET_VERSION'] = settings.ASSET_VERSION
+	context['APP_REVISION'] = settings.APP_REVISION
 
 	context['categories'] = Category.objects.all()
 

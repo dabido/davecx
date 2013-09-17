@@ -30,6 +30,13 @@ class Command(BaseCommand):
 			help='Collect staticfiles after deploy'
 		),
 
+		make_option('--flush_cache',
+			action='store_true',
+			dest='flush_cache',
+			default=False,
+			help='Collect staticfiles after deploy'
+		),
+
 		make_option('--use_all',
 			action='store_true',
 			dest='use_all',
@@ -43,24 +50,42 @@ class Command(BaseCommand):
 		bump_assets = options['bump_assets']
 		collect_static = options['collect_static']
 		use_all = options['use_all']
+		flush_cache = options['flush_cache']
 
+		print "All right, deploying your shit now"
+
+		return
 		os.chdir(MANAGE_DIR)
 
 		if use_maintenance or use_all:
 			os.system("heroku maintenance:on")
 
 		# Deploy to heroku
+		print "\nDeploying to heroku..."
 		os.system("git push heroku master")
 
 		if collect_static or use_all:
+			print "\nCollecting all staticfiles..."
 			os.system("heroku run python manage.py collectstatic --noinput")
 
 		if bump_assets or use_all:
+			print "\nUpdating asset version"
 			cloud = heroku.from_key(HEROKU_API_KEY)
 			app = cloud.apps[HEROKU_APP]
 			last_release = app.releases[-1]
 
-			app.config['ASSET_VERSION'] = last_release.name
+			app.config['APP_REVISION'] = last_release.name
+
+		if flush_cache or use_all:
+			print "\nFlushing memcache..."
+			cmd = ('''heroku run "python -c \\"'''
+					'''import os;'''
+					'''os.environ['DJANGO_SETTINGS_MODULE'] = 'davecx.settings';'''
+					'''from django.core.cache import cache;'''
+					'''cache.clear();'''
+					'''\\" " ''') # Closing quotes for 'heroku run' and 'python -c'
+
+			os.system(cmd)
 
 		if use_maintenance or use_all:
 			os.system("heroku maintenance:off")

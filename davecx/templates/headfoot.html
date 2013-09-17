@@ -2,14 +2,14 @@
 <html>
     <head>
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-    	<link rel="stylesheet" href="{% static 'css/normalize.css' %}?asset_version={{ ASSET_VERSION }}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}?asset_version={{ ASSET_VERSION }}" type="text/css">
+    	<link rel="stylesheet" href="{% static 'css/normalize.css' %}?asset_version={{ APP_REVISION }}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}?asset_version={{ APP_REVISION }}" type="text/css">
 
 		<link rel="author" href="https://plus.google.com/117563392002936932345/"/>
-		<link rel="shortcut icon" href="{% static "img/favicon_32x32.ico" %}?asset_version={{ ASSET_VERSION }}" />
+		<link rel="shortcut icon" href="{% static "img/favicon_32x32.ico" %}?asset_version={{ APP_REVISION }}" />
 
-		<script type="text/javascript" src="{% static "js/angular.min.js" %}?asset_version={{ ASSET_VERSION }}"></script>
-		<script type="text/javascript" src="{% static "js/controller.js" %}?asset_version={{ ASSET_VERSION }}"></script>
+		<script type="text/javascript" src="{% static "js/angular.min.js" %}?asset_version={{ APP_REVISION }}"></script>
+		<script type="text/javascript" src="{% static "js/controller.js" %}?asset_version={{ APP_REVISION }}"></script>
 
 
 		<meta property="og:description" content="{% block fbdescription %}David Mohl is a software engineer / traveller from Munich, Germany. Founder of Personalitycores, creator of ProxMate.{% endblock %}" />
@@ -62,7 +62,7 @@
 		</div>
 
 		<footer>
-			Everything &copy; David Mohl
+			Crafted with &lt;3 by David Mohl <br />({{ APP_REVISION }})
 		</footer>
     </body>
 </html>
