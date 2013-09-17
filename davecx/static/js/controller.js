@@ -66,13 +66,13 @@ app.directive('followingInfobox', function ($window) {
 
 			var windowScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 			if (windowScrollPosition > elementOffset.top && windowScrollPosition < (wrapperOffset.top + wrapperHeight - elementHeight)) {
-				var difference = windowScrollPosition - elementOffset.top;
+				var difference = windowScrollPosition - wrapperOffset.top;
 				angular.element(element).css('top', difference + 'px');
 			} else if (windowScrollPosition > (wrapperOffset.top + wrapperHeight - elementHeight)) {
 				if (wrapperHeight - elementHeight > 0) {
 					angular.element(element).css('top', (wrapperHeight - elementHeight) + 'px');
 				}
-			} else if (windowScrollPosition < elementOffset.top) {
+			} else if (windowScrollPosition < wrapperOffset.top) {
 				angular.element(element).css('top', '0px');
 			}
 		});
