@@ -691,6 +691,15 @@ article.post {
       text-align: center; }
       .pagina:last-child {
         margin-right: 0; } }
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    .pagina {
+      display: block;
+      float: left;
+      margin-right: 3.57866%;
+      width: 100%;
+      text-align: center; }
+      .pagina:last-child {
+        margin-right: 0; } }
 
 footer {
   text-align: center;
