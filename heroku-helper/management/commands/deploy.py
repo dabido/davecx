@@ -87,3 +87,5 @@ class Command(BaseCommand):
 
 		if use_maintenance or use_all:
 			os.system("heroku maintenance:off")
+
+		print "\nFinished!!!"
