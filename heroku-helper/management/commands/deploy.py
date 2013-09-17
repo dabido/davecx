@@ -53,8 +53,6 @@ class Command(BaseCommand):
 		flush_cache = options['flush_cache']
 
 		print "All right, deploying your shit now"
-
-		return
 		os.chdir(MANAGE_DIR)
 
 		if use_maintenance or use_all:
