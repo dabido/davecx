@@ -42,6 +42,24 @@
 	<span itemprop="articleBody">{{ post.content|markdown|urlize }}</span>
 </div>
 
+<div class="infobox infobox-mobile">
+	<h3>Article info</h3>
+	<p>Author:<span itemprop="author">David Mohl</span></p>
+	<p>Published on:<span itemprop="datePublished">{{ post.publish_date|date:'Y/m/d' }}</span></p>
+	<p>Category:<span><a href="{% url 'blog.views.listing' category_slug=post.category.slug %}">{{ post.category.name }}</a></span></p>
+	<p>{% spaceless %}
+		Tags:
+		<span itemprop="keywords">{% for tag in post.tag.all %}
+			<a href="{% url 'blog.views.listing' tag_slug=tag.slug %}" title="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+		{% endfor %}</span>
+	{% endspaceless %}</p>
+	<div class="share">
+		<a class="sharebutton share-facebook" sharebutton="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ ABSOLUTE_URL|urlencode }}">Share</a>
+		<a class="sharebutton share-gplus" sharebutton="Google Plus" href="https://plus.google.com/share?url={{ ABSOLUTE_URL|urlencode }}">Plus</a>
+		<a class="sharebutton share-twitter" sharebutton="Twitter" href="https://twitter.com/intent/tweet?url={{ ABSOLUTE_URL|urlencode }}&via=Davicorn&text={{ post.title|urlencode }}">Tweet</a>
+	</div>
+</div>
+
 <div class="comments" itemprop="comment">
     <div id="disqus_thread"></div>
     <script type="text/javascript">

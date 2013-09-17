@@ -353,7 +353,8 @@ article.smallteaser div.info {
     float: left;
     margin-right: 7.42297%;
     width: 100%;
-    margin-right: 0; }
+    margin-right: 0;
+    height: 450px; }
     article.smallteaser:last-child {
       margin-right: 0; }
     article.smallteaser a.imgwrapper img {
@@ -363,7 +364,8 @@ article.smallteaser div.info {
     display: block;
     float: left;
     margin-right: 3.57866%;
-    width: 48.21067%; }
+    width: 48.21067%;
+    height: 450px; }
     article.smallteaser:last-child {
       margin-right: 0; }
     article.smallteaser:nth-child(2n+1) {
@@ -591,6 +593,8 @@ article.post {
         clear: both; }
     article.post div.infobox .share {
       margin: 60px 0px 20px 0px; }
+  article.post div.infobox-mobile {
+    display: none; }
   article.post div.infobox.follow {
     position: fixed; }
   article.post div.flow {
@@ -629,6 +633,24 @@ article.post {
     width: 100%;
     clear: both;
     margin: 50px 0px 0px 0px; }
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    article.post div.flow {
+      display: block;
+      float: left;
+      margin-right: 7.42297%;
+      width: 100%; }
+      article.post div.flow:last-child {
+        margin-right: 0; }
+    article.post div.infobox {
+      display: none; }
+    article.post div.infobox-mobile {
+      display: block;
+      display: block;
+      float: left;
+      margin-right: 7.42297%;
+      width: 100%; }
+      article.post div.infobox-mobile:last-child {
+        margin-right: 0; } }
   @media screen and (min-width: 600px) and (max-width: 900px) {
     article.post div.flow {
       display: block;
@@ -639,11 +661,14 @@ article.post {
       article.post div.flow:last-child {
         margin-right: 0; }
     article.post div.infobox {
+      display: none; }
+    article.post div.infobox-mobile {
+      display: block;
       display: block;
       float: left;
       margin-right: 3.57866%;
-      width: 48.21067%; }
-      article.post div.infobox:last-child {
+      width: 74.10533%; }
+      article.post div.infobox-mobile:last-child {
         margin-right: 0; } }
 
 .pagina {

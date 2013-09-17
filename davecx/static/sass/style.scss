@@ -100,6 +100,10 @@ article.post {
 		}
 	}
 
+	div.infobox-mobile {
+		display: none;
+	}
+
 	div.infobox.follow {
 		position: fixed;
 	}
@@ -140,7 +144,18 @@ article.post {
 	}
 
 	@include media($mobile) {
+		div.flow {
+			@include span-columns(4);
+		}
 
+		div.infobox {
+			display: none;
+		}
+
+		div.infobox-mobile {
+			display: block;
+			@include span-columns(4);
+		}
 	}
 
 	@include media($tablet) {
@@ -150,7 +165,12 @@ article.post {
 		}
 
 		div.infobox {
-			@include span-columns(4);
+			display: none;
+		}
+
+		div.infobox-mobile {
+			display: block;
+			@include span-columns(6);
 		}
 	}
 }

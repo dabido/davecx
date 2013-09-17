@@ -175,6 +175,7 @@ article.smallteaser {
 	@include media($mobile) {
 		@include span-columns(4);
 		@include omega();
+		height: 450px;
 
 		a.imgwrapper {
 			img {
@@ -186,6 +187,7 @@ article.smallteaser {
 	@include media($tablet) {
 		@include span-columns(4);
 		@include omega("2n+1");
+		height: 450px;
 	}
 
 	@include media($desktop) {
