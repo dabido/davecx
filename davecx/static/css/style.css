@@ -612,15 +612,10 @@ article.post {
       margin-right: 0; }
     article.post div.flow img {
       margin-bottom: 10px;
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
       width: 100%;
       height: auto;
       border: solid 1px #eee;
       padding: 5px; }
-      article.post div.flow img:last-child {
-        margin-right: 0; }
     article.post div.flow img.smaller {
       height: auto;
       width: auto;
