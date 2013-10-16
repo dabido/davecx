@@ -53,17 +53,6 @@
 			<a href="{% url 'blog.views.listing' tag_slug=tag.slug %}" title="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
 		{% endfor %}</span>
 	{% endspaceless %}</p>
-	<script type="text/javascript"><!--
-		google_ad_client = "ca-pub-9208276989520614";
-		/* Infobox ad */
-		google_ad_slot = "8930527885";
-		google_ad_width = 200;
-		google_ad_height = 90;
-		//-->
-		</script>
-		<script type="text/javascript"
-		src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
 	<div class="share">
 		<a class="sharebutton share-facebook" sharebutton="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ ABSOLUTE_URL|urlencode }}">Share</a>
 		<a class="sharebutton share-gplus" sharebutton="Google Plus" href="https://plus.google.com/share?url={{ ABSOLUTE_URL|urlencode }}">Plus</a>
