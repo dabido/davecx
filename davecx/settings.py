@@ -22,7 +22,7 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = "davecx"
 AWS_QUERYSTRING_AUTH = False
 
-HEROKU_API_KEY = '63401c309823224b4e97ac509ab229f756cd6392'
+HEROKU_API_KEY = 'xxxx'
 HEROKU_APP = 'davecx'
 
 date_after_month = datetime.today() + relativedelta(months=1)
