@@ -3,7 +3,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body > header:first-child, div.header-flap {
+body .topheader, div.header-flap {
   display: block;
   float: left;
   margin-right: 2.35765%;
@@ -16,9 +16,9 @@ body > header:first-child, div.header-flap {
   margin-left: -4.2649%;
   z-index: 3;
   font-size: 13px; }
-  body > header:first-child:last-child, div.header-flap:last-child {
+  body .topheader:last-child, div.header-flap:last-child {
     margin-right: 0; }
-  body > header:first-child h1, div.header-flap h1 {
+  body .topheader h1, div.header-flap h1 {
     text-align: center;
     font-weight: bold;
     margin: 0;
@@ -28,43 +28,43 @@ body > header:first-child, div.header-flap {
     margin-right: 2.35765%;
     width: 23.23176%;
     color: white; }
-    body > header:first-child h1:last-child, div.header-flap h1:last-child {
+    body .topheader h1:last-child, div.header-flap h1:last-child {
       margin-right: 0; }
-  body > header:first-child a, div.header-flap a {
+  body .topheader a, div.header-flap a {
     color: white;
     line-height: 50px;
     display: inline-block;
     height: 50px;
     text-decoration: none;
     padding: 0px 10px; }
-  body > header:first-child a:hover, div.header-flap a:hover {
+  body .topheader a:hover, div.header-flap a:hover {
     background: #2693ba; }
-  body > header:first-child nav, div.header-flap nav {
+  body .topheader nav, div.header-flap nav {
     text-align: left;
     display: block;
     float: left;
     margin-right: 2.35765%;
     width: 31.76157%;
     margin-left: 4.2649%; }
-    body > header:first-child nav:last-child, div.header-flap nav:last-child {
+    body .topheader nav:last-child, div.header-flap nav:last-child {
       margin-right: 0; }
-    body > header:first-child nav a, div.header-flap nav a {
+    body .topheader nav a, div.header-flap nav a {
       font-size: 17px; }
-      body > header:first-child nav a img, div.header-flap nav a img {
+      body .topheader nav a img, div.header-flap nav a img {
         height: 50px;
         line-height: 50px;
         display: inline-block;
         vertical-align: middle; }
-  body > header:first-child nav.social, div.header-flap nav.social {
+  body .topheader nav.social, div.header-flap nav.social {
     display: block;
     float: left;
     margin-right: 2.35765%;
     width: 31.76157%;
     margin-left: 0%;
     text-align: right; }
-    body > header:first-child nav.social:last-child, div.header-flap nav.social:last-child {
+    body .topheader nav.social:last-child, div.header-flap nav.social:last-child {
       margin-right: 0; }
-  body > header:first-child .nav-arrow, div.header-flap .nav-arrow {
+  body .topheader .nav-arrow, div.header-flap .nav-arrow {
     width: 0;
     height: 0;
     border-left: 6px solid transparent;
@@ -73,7 +73,7 @@ body > header:first-child, div.header-flap {
     display: inline-block;
     position: relative;
     bottom: 3px; }
-  body > header:first-child .categories, div.header-flap .categories {
+  body .topheader .categories, div.header-flap .categories {
     position: absolute;
     display: block;
     float: left;
@@ -85,104 +85,104 @@ body > header:first-child, div.header-flap {
     z-index: 1;
     padding: 5px 0px;
     border-radius: 5px; }
-    body > header:first-child .categories:last-child, div.header-flap .categories:last-child {
+    body .topheader .categories:last-child, div.header-flap .categories:last-child {
       margin-right: 0; }
-    body > header:first-child .categories a, div.header-flap .categories a {
+    body .topheader .categories a, div.header-flap .categories a {
       display: block;
       line-height: 30px;
       height: auto;
       color: #414141; }
   @media screen and (min-width: 0px) and (max-width: 600px) {
-    body > header:first-child, div.header-flap {
+    body .topheader, div.header-flap {
       display: block;
       float: left;
       margin-right: 7.42297%;
       width: 100%;
       margin-left: 0%; }
-      body > header:first-child:last-child, div.header-flap:last-child {
+      body .topheader:last-child, div.header-flap:last-child {
         margin-right: 0; }
-      body > header:first-child h1, div.header-flap h1 {
+      body .topheader h1, div.header-flap h1 {
         font-size: 15px;
         display: block;
         float: left;
         margin-right: 7.42297%;
         width: 46.28851%; }
-        body > header:first-child h1:last-child, div.header-flap h1:last-child {
+        body .topheader h1:last-child, div.header-flap h1:last-child {
           margin-right: 0; }
-      body > header:first-child nav, div.header-flap nav {
+      body .topheader nav, div.header-flap nav {
         display: block;
         float: left;
         margin-right: 7.42297%;
         width: 19.43277%;
         margin-left: 0%; }
-        body > header:first-child nav:last-child, div.header-flap nav:last-child {
+        body .topheader nav:last-child, div.header-flap nav:last-child {
           margin-right: 0; }
-        body > header:first-child nav a, div.header-flap nav a {
+        body .topheader nav a, div.header-flap nav a {
           display: none; }
-        body > header:first-child nav a:first-child, div.header-flap nav a:first-child {
+        body .topheader nav a:first-child, div.header-flap nav a:first-child {
           display: inline-block; }
-      body > header:first-child nav.social, div.header-flap nav.social {
+      body .topheader nav.social, div.header-flap nav.social {
         display: block;
         float: left;
         margin-right: 7.42297%;
         width: 19.43277%; }
-        body > header:first-child nav.social:last-child, div.header-flap nav.social:last-child {
+        body .topheader nav.social:last-child, div.header-flap nav.social:last-child {
           margin-right: 0; }
-      body > header:first-child .categories, div.header-flap .categories {
+      body .topheader .categories, div.header-flap .categories {
         display: none; } }
   @media screen and (min-width: 600px) and (max-width: 900px) {
-    body > header:first-child, div.header-flap {
+    body .topheader, div.header-flap {
       display: block;
       float: left;
       margin-right: 3.57866%;
       width: 100%;
       margin-left: 0%; }
-      body > header:first-child:last-child, div.header-flap:last-child {
+      body .topheader:last-child, div.header-flap:last-child {
         margin-right: 0; }
-      body > header:first-child nav, div.header-flap nav {
+      body .topheader nav, div.header-flap nav {
         margin-left: 0%;
         display: block;
         float: left;
         margin-right: 3.57866%;
         width: 35.26334%; }
-        body > header:first-child nav:last-child, div.header-flap nav:last-child {
+        body .topheader nav:last-child, div.header-flap nav:last-child {
           margin-right: 0; }
-        body > header:first-child nav a:nth-child(2), div.header-flap nav a:nth-child(2) {
+        body .topheader nav a:nth-child(2), div.header-flap nav a:nth-child(2) {
           display: none; }
-      body > header:first-child h1, div.header-flap h1 {
+      body .topheader h1, div.header-flap h1 {
         font-size: 15px;
         display: block;
         float: left;
         margin-right: 3.57866%;
         width: 22.316%; }
-        body > header:first-child h1:last-child, div.header-flap h1:last-child {
+        body .topheader h1:last-child, div.header-flap h1:last-child {
           margin-right: 0; }
-      body > header:first-child .categories, div.header-flap .categories {
+      body .topheader .categories, div.header-flap .categories {
         margin-left: 9.06313%;
         min-width: 140px; } }
   @media screen and (min-width: 900px) and (max-width: 68.75em) {
-    body > header:first-child, div.header-flap {
+    body .topheader, div.header-flap {
       display: block;
       float: left;
       margin-right: 2.35765%;
       width: 100%;
       margin-left: 0%; }
-      body > header:first-child:last-child, div.header-flap:last-child {
+      body .topheader:last-child, div.header-flap:last-child {
         margin-right: 0; }
-      body > header:first-child h1, div.header-flap h1 {
+      body .topheader h1, div.header-flap h1 {
         display: block;
         float: left;
         margin-right: 2.35765%;
         width: 31.76157%; }
-        body > header:first-child h1:last-child, div.header-flap h1:last-child {
+        body .topheader h1:last-child, div.header-flap h1:last-child {
           margin-right: 0; }
-      body > header:first-child nav, div.header-flap nav {
+      body .topheader nav, div.header-flap nav {
         margin-left: 0%;
         display: block;
         float: left;
         margin-right: 2.35765%;
         width: 31.76157%; }
-        body > header:first-child nav:last-child, div.header-flap nav:last-child {
+        body .topheader nav:last-child, div.header-flap nav:last-child {
           margin-right: 0; } }
 
 div.header-flap {

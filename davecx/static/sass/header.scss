@@ -1,6 +1,7 @@
 $header-height: 50px;
 
-body > header:first-child, div.header-flap {
+
+body .topheader, div.header-flap {
 	@include span-columns(13);
 	@include omega();
 	background: $lightblue;
