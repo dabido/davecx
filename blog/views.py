@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.cache import cache_page
 from django.template import RequestContext
 from blog.models import Post, VISIBILITY_PUBLIC, VISIBILITY_UNLISTED, Tag, Category
+from davecx.settings import DEBUG
 
 @cache_page(60 * 60)
 def listing(request, page=1, tag_slug=None, category_slug=None):
@@ -67,7 +68,8 @@ def detail(request, id, slug):
 	post = get_object_or_404(Post, Q(id=id), Q(visibility=VISIBILITY_PUBLIC) | Q(visibility=VISIBILITY_UNLISTED))
 
 	return TemplateResponse(request, 'detail.html', context=RequestContext(request, {
-		'post': post
+		'post': post,
+		'is_dev': DEBUG
 	}))
 
 @cache_page(60 * 60)
