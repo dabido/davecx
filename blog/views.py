@@ -1,11 +1,12 @@
 from django.template.response import SimpleTemplateResponse, TemplateResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.views.decorators.cache import cache_page
 from django.template import RequestContext
 from blog.models import Post, VISIBILITY_PUBLIC, VISIBILITY_UNLISTED, Tag, Category
+from django.core.urlresolvers import reverse
 from davecx.settings import DEBUG
 
 @cache_page(60 * 60)
@@ -64,8 +65,10 @@ def listing(request, page=1, tag_slug=None, category_slug=None):
 	}))
 
 @cache_page(60 * 60)
-def detail(request, id, slug):
+def detail(request, id, slug=None):
 	post = get_object_or_404(Post, Q(id=id), Q(visibility=VISIBILITY_PUBLIC) | Q(visibility=VISIBILITY_UNLISTED))
+	if slug is None:
+		return HttpResponseRedirect(reverse('blog.views.detail', kwargs={'id': post.id, 'slug': post.slug}))
 
 	return TemplateResponse(request, 'detail.html', context=RequestContext(request, {
 		'post': post,

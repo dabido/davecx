@@ -19,6 +19,7 @@ urlpatterns = patterns('blog.views',
     url('^category/(?P<category_slug>[\w-]+)/$', 'listing'),
     url('^category/(?P<category_slug>[\w-]+)/page/(?P<page>\d+)/$', 'listing'),
 
+    url('^post/(?P<id>\d+)/$', 'detail'),
     url('^post/(?P<id>\d+)/(?P<slug>[\w-]+)/$', 'detail'),
     url('^about/$', 'about'),
 )
